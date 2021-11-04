@@ -1,0 +1,28 @@
+/*
+*  References
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.reference {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__image {
+        @include media-breakpoint-down(sm) {
+            @include size(115px, 54px);
+        }
+
+        @include size(151px, 72px);
+        padding-right: 10px;
+        // border-right: 1px dashed lighten($color-text, 25%);
+    }
+
+    &__summary {
+        width: 350px;
+        max-width: 100%;
+        margin-bottom: 0;
+        margin-left: 15px;
+    }
+}

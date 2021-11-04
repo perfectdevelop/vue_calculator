@@ -1,0 +1,203 @@
+/*
+*  Insurance Mtpl Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.section {
+    &--testimonial {
+        padding-top: 0;
+    }
+
+    &--redirect {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.list-group {
+    @include media-breakpoint-up(md) {
+        height: 100%;
+    }
+}
+
+
+.loading {
+    border-radius: 8px;
+    opacity: .75;
+}
+
+.banner:before {
+    @include media-breakpoint-down(sm) {
+        background-attachment: scroll;
+        background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+        background-size: 100% 100%;
+    }
+    @include media-breakpoint-up(sm) {
+        background-image: url($path + "/images/banner/trafik-sigortasi.jpg");
+        background-position: 0 100%;
+        opacity: .7;
+        filter: brightness(100%);
+    }
+}
+
+.banner-swiper {
+    border: 0;
+}
+
+.brands__image {
+    height: auto;
+}
+
+.data-table__item {
+    @include media-breakpoint-down(sm) {
+        font-size: 13px;
+    }
+    img {
+        @include media-breakpoint-down(sm) {
+            width: 40px;
+        }
+    }
+}
+
+.feature-box {
+    &__title {
+        @include media-breakpoint-down(sm) {
+            margin-top: 0;
+        }
+    }
+
+    &--redirect {
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            align-items: center;
+            height: 75px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        justify-content: center;
+        height: 90px;
+        margin: 0;
+
+        .feature-box__title {
+            @include media-breakpoint-down(sm) {
+                font-size: rem(14px);
+            }
+
+            font-size: rem(19px);
+            font-weight: 600;
+        }
+    }
+
+    &__icon {
+        color: $color-black;
+    }
+}
+
+.info-box {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+    }
+    &__icon {
+        @include media-breakpoint-down(sm) {
+            margin: 0 1rem 0 0;
+        }
+    }
+}
+
+.section-advice {
+    @include media-breakpoint-up(sm) {
+        background-color: $gray-100;
+    }
+
+    .feature-box {
+        background-color: transparent;
+        box-shadow: none;
+
+        &__icon {
+            @include media-breakpoint-down(sm) {
+                max-width: 40px;
+            }
+        }
+    }
+}
+
+.newcar-checbox-container {
+    min-width: 300px;
+}
+
+.agreement__container {
+    @include media-breakpoint-up(sm) {
+        margin-top: 1rem;
+    }
+}
+
+.agreement__checkbox {
+    display: flex;
+    flex-direction: column-reverse;
+    .funnel-form__error {
+        margin-top: 1rem;
+    }
+}
+
+.tab__container {
+    text-align: center;
+
+    .tab__column {
+        cursor: pointer;
+
+        span {
+            color: $color-text;
+        }
+
+        div {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $primary;
+
+            &:after {
+                position: absolute;
+                right: 5px;
+                bottom: 0;
+                width: 96%;
+                transition: border .1s;
+                border-bottom: 0 solid $primary;
+                content: "";
+            }
+        }
+
+        
+    }
+
+    .active__tab {
+        div {
+            &:after {
+                border-bottom: 3px solid $primary;
+            }
+        }
+    
+        span {
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+}
+
+.new-car__tab {
+    &:before {
+        position: absolute;
+        bottom: 0;
+        left: -8px;
+        width: 16px;
+        border-bottom: 1px solid $primary;
+        content: "";
+    }
+}
+
+input:disabled {
+    background-color: rgba(113, 113, 113, .1);
+    cursor: not-allowed;
+}
+
+.js-mask-plate {
+    text-transform: uppercase;
+}

@@ -1,0 +1,10 @@
+/*
+*  Footer
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.page-body {
+    @include media-breakpoint-down(sm) {
+        overflow-x: hidden;
+    }
+}

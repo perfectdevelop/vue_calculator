@@ -1,0 +1,112 @@
+/*
+*  CMS Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile.jpg");
+            background-size: 100% 100%;
+        }
+        background-image: url($path + "/images/banner/kredi-hesaplama.jpg");
+        background-position: 0 100%;
+    }
+}
+
+.banner__title {
+    color: $color-text;
+}
+
+.banner__content {
+    background: $color-white;
+    box-shadow: 0 15px 22px 0 rgba(0, 0, 0, .08);
+}
+
+.funnel-form {
+    &__section--hidden {
+        height: 0;
+        transition: all .3s;
+        opacity: 0;
+    }
+    &__section--show {
+        height: rem(107px);
+        opacity: 1;
+    }
+}
+
+.list-group {
+    @include media-breakpoint-up(sm) {
+        height: 100%;
+    }
+}
+
+.product-card {
+    margin: rem(5px) 0;
+    &__content {
+        padding: rem(10px) rem(20px) rem(10px);
+        & > div[class^="col-"] {
+            padding: 0;
+        }
+    }
+    &__logo {
+        @include media-breakpoint-up(sm) {
+            width: 75%;
+        }
+        width: 30%;
+        height: 100%;
+        margin: 0;
+    }
+    &__btn {
+        width: auto;
+        margin-top: 0;
+    }
+    &__value--small {
+        @include media-breakpoint-up(sm) {
+            font-weight: bold;
+        }
+        font-size: rem(12px);
+        font-weight: 600;
+    }
+    &__value--small-mobile {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(24px);
+        }
+        @include media-breakpoint-down(sm) {
+            font-weight: 600;
+        }
+    }
+    &--detail-section {
+        @include media-breakpoint-down(sm) {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        margin-top: 0;
+    }
+
+    .insurance-content {
+        span {
+            @include media-breakpoint-down(sm) {
+                line-height: 1;
+            }
+        }
+
+        &__logo {
+            @include media-breakpoint-up(sm) {
+                width: 50%;
+                height: auto;
+            }  
+        }
+    }
+}
+
+.tab-button {
+    @include media-breakpoint-down(md) {
+        height: rem(123px);
+    }
+    &--active, &:focus {
+        height: 90%;
+    }
+}

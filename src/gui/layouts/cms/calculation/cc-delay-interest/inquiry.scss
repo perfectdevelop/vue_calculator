@@ -1,0 +1,39 @@
+/*
+*  CC Delay Interest Calculate Styles
+*  Hesapkurdu Arge
+*/
+
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+            background-size: 100% 100%;
+            filter: brightness(100%);
+        }
+        @include media-breakpoint-up(sm) {
+            background-image: url($path + "/images/banner/hesaplama-araci.jpg");
+        }
+    }
+}
+
+.funnel-form {
+    @include media-breakpoint-down(sm) {
+        min-height: 293px;
+    }
+    @include media-breakpoint-up(sm) {
+        min-height: 353px;
+    }
+}
+
+.tooltip-inner {
+    max-width: 300px;
+}
+
+.application-detail-list__elements {
+    line-height: 22px;
+
+    .solidbox {
+        text-align: center;
+    }
+}

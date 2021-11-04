@@ -1,0 +1,18 @@
+/*
+*  Main Nav Shadow CSS Rules
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.menu-shadow {
+    @include size(100%, 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .4);
+    z-index: 9;
+
+    &--hide {
+        display: none;
+    }
+}

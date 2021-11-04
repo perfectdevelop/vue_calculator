@@ -1,0 +1,331 @@
+/*
+*  Personal Loan Inqiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+
+body {
+    background-color: $gray-100;
+}
+
+.rating-container {
+    padding: 0;
+}
+
+.section--content {
+    @include media-breakpoint-up(md) {
+        margin-top: 60px;
+    }
+}
+
+.data-table__item {
+    @include media-breakpoint-down(sm) {
+        min-width: rem(70px);
+        font-size: rem(14px);
+    }
+
+    &:first-child {
+        min-width: 20px;
+        font-weight: 700;
+    }
+
+    padding: rem(20px) 0;
+}
+
+.price-box {
+    &-ruler {
+        @include media-breakpoint-down(sm) {
+            padding: 0 rem(15px);
+        }
+    }
+}
+
+.life-insurer-company-logo {
+    height: 40px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.product-card {
+    &:first-child {
+        @include media-breakpoint-up(sm) {
+            margin-top: 0;
+        }
+    }
+
+    .cursor--pointer[data-toggle="tooltip"]::before {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: no-repeat;
+        background-image: url($path + "/images/question.svg");
+        background-size: contain;
+        content: " ";
+        filter: none;
+    }
+
+}
+
+.modal-fullscreen {
+    &-header__text::before {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 3px;
+        background: no-repeat;
+        background-image: url($path + "/images/question.svg");
+        background-size: contain;
+        content: " ";
+        filter: none;
+    }
+}
+
+
+.accordion {
+    &__title {
+        @include hk-icon-(down, after);
+        padding: .5rem 0;
+        font-size: rem(14px);
+        font-weight: 500;
+    }
+
+    &__collapse {
+        &--card-program {
+            height: 200px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
+}
+
+.radio {
+    display: block;
+}
+
+.checkbox {
+    display: block;
+}
+
+.expandable-product-card {
+    &__logo {
+        @include media-breakpoint-down(sm) {
+            width: 35%;
+        }
+
+        width: 95%;
+    }
+
+    &__content {
+        &--center>div:first-child {
+            @include media-breakpoint-down(sm) {
+                width: rem(100px);
+            }
+
+            width: rem(135px);
+        }
+    }
+}
+
+.collapse::-webkit-scrollbar {
+    width: .3rem;
+}
+
+.collapse::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.collapse::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+}
+
+.filter__btn {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.accordion__title:after {
+    transform: rotate(180deg);
+}
+
+
+.tab-section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav {
+    @include media-breakpoint-up(sm) {
+        justify-content: center;
+    }
+
+    overflow-x: auto;
+
+    &-item {
+        @include media-breakpoint-down(sm) {
+            flex: 0 0 38%;
+        }
+
+        align-self: flex-end;
+        white-space: nowrap;
+    }
+
+    &--border a {
+        @include media-breakpoint-down(sm) {
+            padding: 0 0 rem(5px);
+        }
+    }
+}
+
+.product-card__logo {
+    @include media-breakpoint-down(sm) {
+        width: 30%;
+        height: 100%;
+    }
+}
+
+.contiuneRow {
+    @include media-breakpoint-up(md) {
+        position: relative;
+        top: -20px;
+        right: 10px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        top: -60px;
+    }
+}
+
+.information-text {
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+    &__mobile {
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+  }
+
+.rating-score-text {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: 0;
+    }
+    margin-left: 3px;
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rateyo-stars {
+    margin-top: 2px;
+}
+
+.cursor--pointer {
+    padding-left: 5px;
+}
+
+.cursor--pointer[data-toggle="tooltip"]::before {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: no-repeat;
+    background-image: url($path + "/images/question.svg");
+    background-size: contain;
+    content: " ";
+    filter: none;
+}
+
+.tooltip-inner-div {
+    text-align: left;
+}
+
+.ratings {
+    margin-right: 0;
+    padding-top: 10px;
+}
+
+.online-application-desktop {
+    float: right;
+}
+
+.ratings-mobile {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        font-size: 0.8rem;
+    }
+    font-size: 0.9rem;
+}
+
+.ratings-row {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: -8px;
+    }
+    @media (max-width: 360px) {
+        padding-right: 0;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-right: 3%;
+    }
+    justify-content: space-between;
+    margin-left: 0;
+    padding-right: 5%;
+}
+
+.comment-modal-body {
+    @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.comment-modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.js-modal-rating-container {
+    margin-top: 2px;
+}
+
+.customer-score-title {
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
+}
+
+.js-total-score {
+    color: #007AFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.rating-p {
+    @include media-breakpoint-between(sm, md) { 
+        font-size: 0.825rem;
+    }
+}
+
+.modal-rateyo-overall {
+    padding-left: 0;
+}
+
+.modal-fullscreen-header .container {
+    @include media-breakpoint-down(sm) {
+        padding-left: 0;
+    }
+}
+
+.overall-tooltip {
+    @include media-breakpoint-down(xs) {
+        top: 2px;
+    }
+    position: relative;
+    top: 3px;
+}

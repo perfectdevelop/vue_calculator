@@ -1,0 +1,15 @@
+/*
+*  Expand Collapse Link
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.btn--close {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    &::before {
+        margin: 0 rem(5px);
+        content: "Kapat ";
+    }
+}

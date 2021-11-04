@@ -1,0 +1,10 @@
+/*
+*  Custom Widths
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.mw-xs-100 {
+    @include media-breakpoint-down(sm) {
+        min-width: 100px !important;
+    }
+}

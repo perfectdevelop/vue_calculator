@@ -1,0 +1,15 @@
+/*
+*  Chart
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Hakan Sarier <hakan@hesapkurdu.com>
+*/
+
+.chart-container {
+    padding: 30px; 
+    background: white; 
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
+    
+    .chart-graph {
+        margin-left: -1.7rem;
+    }
+}

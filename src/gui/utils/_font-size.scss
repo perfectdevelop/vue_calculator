@@ -1,0 +1,10 @@
+/*
+*  Font Size
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+@for $i from 10 through 24 {
+  .font--#{$i} {
+      font-size: #{$i}px !important;
+  }
+}

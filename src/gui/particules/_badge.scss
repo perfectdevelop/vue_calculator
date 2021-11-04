@@ -1,0 +1,17 @@
+/*
+*  Badge - Add extra themes to Bootstrap Badge
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.badge {
+    &--campaign {
+        border: 1px solid $secondary;
+        background-color: transparent;
+        color: $secondary;
+
+        .badge--icon {
+            color: $secondary;
+        }
+    }
+}

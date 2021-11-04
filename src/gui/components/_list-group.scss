@@ -1,0 +1,66 @@
+/*
+*  List
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Hakan Sarier <hakan@hesapkurdu.com>
+*/
+
+.list-group {
+    position: relative;
+    padding: .75rem 1.25rem 3rem;
+    background-color: $list-group-bg;
+    color: $color-text;
+    box-shadow: 0 15px 22px 0 rgba(0, 0, 0, 0.08);
+
+    &--has-not-link {
+        padding: .75rem 1.25rem;
+    }
+
+    &__header {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(24px);
+        }
+        font-size: rem(20px);
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    &__footer {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        text-align: right;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        color: #000;
+        vertical-align: middle;
+    }
+
+    &__list {
+        margin-bottom: 0;
+        padding: 0;
+        list-style-type: none;
+
+        & > *:last-child * {
+            border-bottom: none;
+        }
+    }
+
+    &__link {
+        @include hk-icon-(arrow-bold-right, after);
+        display: block;
+        position: relative;
+        min-height: 35px;
+        padding: 0.5rem .75rem 0.5rem 0;
+        border-bottom: 2px solid rgba($color: $color-dark-gray, $alpha: 0.1);
+        color: inherit;
+        font-size: rem(14px);
+        &:after {
+            position: absolute;
+            right: 0;
+            float: right;
+            font-size: rem(12px);
+        }
+    }
+}

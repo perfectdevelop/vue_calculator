@@ -1,0 +1,353 @@
+/*
+*  Bank ML, PL, AL, DP Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.section {
+    &--testimonial,
+    &--statics {
+        @include media-breakpoint-down(sm) {
+            .container,
+            .col-md-12 {
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            .row {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &--testimonial {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.banner {
+    &--ml {
+        &::before {
+            background-image: url($path + "/images/banner/banka-konut.jpg");
+        }
+    }
+    &--pl {
+        &::before {
+            background-image: url($path + "/images/banner/banka-ihtiyac.jpg");
+        }
+    }
+    &--al {
+        &::before {
+            background-image: url($path + "/images/banner/banka-tasit.jpg");
+        }
+    }
+    &--dp {
+        &::before {
+            background-image: url($path + "/images/banner/kredi-hesaplama.jpg");
+        }
+    }
+    &--pl, &--ml, &--al, &--dp {
+        &::before {
+            @include media-breakpoint-down(sm) {
+                background-attachment: scroll;
+                background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+                background-size: 100% 100%;
+            }
+            background-position: 0 100%;
+        }
+    }
+    &__content {
+        .col-12:first-child {
+            min-height: 56px;
+        }
+    }
+}
+
+.funnel-form {
+    @include media-breakpoint-up(sm) {
+        width: 535px;
+        margin: 0 auto;
+    }
+    &__section--hidden {
+        height: 0;
+        transition: all .3s;
+        opacity: 0;
+    }
+    &__section--show {
+        height: rem(107px);
+        opacity: 1;
+    }
+}
+
+.list-group {
+    @include media-breakpoint-up(sm) {
+        height: 100%;
+    }
+}
+
+.section {
+    &--hk-offer {
+        padding: 1rem 0;
+    }
+}
+
+.component--white {
+    @include media-breakpoint-down(sm) {
+        margin: 0 rem(8px);
+    }
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 rem(15px) rem(22px) 0 rgba(0, 0, 0, 0.08);
+}
+
+.data-table__item {
+    @include media-breakpoint-down(sm) {
+        padding: rem(20px) rem(5px);
+        font-size: rem(14px);
+    }
+}
+
+.form--payment-mail {
+    border: rem(1px) solid $gray-300;
+    border-radius: rem(5px);
+}
+
+.tab-button {
+    @include media-breakpoint-down(sm) {
+        height: rem(90px);
+    }
+    &:focus, &--active {
+        height: 90%;
+    }
+    height: rem(98px);
+    padding: 0;
+    &__title {
+        padding: 0;
+        /* iphone 5/se ekrani icin font boyutu degisikligi*/
+        @media (device-height: 568px) and (device-width: 320px) {
+            font-size: rem(11px);
+        }
+    }
+    &__icon {
+        width: 32px;
+        height: 48px;
+    }
+}
+
+.text--small-link-copy  {
+    color: $color-text;
+    font-size: rem(12px);
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.btn-submit {
+    &--link {
+        background: transparent;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.data-table--payment-plan {
+    .data-table__item {
+        @include media-breakpoint-down(sm) {
+            min-width: rem(70px);
+            font-size: rem(14px);
+            &:first-child {
+                min-width: 0;
+                font-weight: 700;
+            }
+        }
+        padding: rem(20px) 0;
+        text-align: center;
+    }
+}
+
+.data-table--credit-info {
+    strong {
+        font-weight: 700;
+    }
+}
+
+.row {
+    &__scroll--x {
+        padding-bottom: .3rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .flex-grow-1 {
+            flex: 0 0 29%;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        @include media-breakpoint-up(sm) {
+            overflow: hidden;
+            .flex-grow-1 {
+                flex: 0 0 18%;
+            }
+        }
+    }
+}
+
+.rating-container {
+    padding: 0;
+}
+
+.feature-box {
+    height: 100%;
+    padding: 1rem 1rem 0;
+    &__logo {
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+        }
+        width: 100%;
+        height: auto;
+    }
+    @include media-breakpoint-up(sm) {
+        justify-content: space-around;
+        padding: 1rem;
+    }
+}
+
+.tab-section {
+    @include media-breakpoint-down(sm) {
+        overflow-x: scroll;
+    }
+    margin: 0 auto;
+}
+
+.nav-item {
+    align-self: flex-end;
+    white-space: nowrap;
+}
+
+.best-rate {
+    position: absolute;
+    margin-left: .5rem;
+    &__color {
+        &--up {
+            color: $primary;
+        }
+        &--right {
+            color: #FFD700;
+        }
+        &--down {
+            color: #22B14C;
+        }
+    }
+    &::before {
+        font-weight: bold;
+    }
+}
+
+.chart-container {
+    background: none;
+    box-shadow: none;
+}
+
+.rating-score-text {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: 0;
+    }
+    margin-left: 3px;
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rateyo-stars {
+    margin-top: 2px;
+}
+
+.cursor--pointer {
+    padding-left: 5px;
+}
+
+.cursor--pointer[data-toggle="tooltip"]::before {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: no-repeat;
+    background-image: url($path + "/images/question.svg");
+    background-size: contain;
+    content: " ";
+    filter: none;
+}
+
+.tooltip-inner-div {
+    text-align: left;
+}
+
+.ratings {
+    margin-right: 0;
+    padding-top: 10px;
+}
+
+.online-application-desktop {
+    float: right;
+}
+
+.ratings-mobile {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        font-size: 0.8rem;
+    }
+    font-size: 0.9rem;
+}
+
+.ratings-row {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: -8px;
+        padding-right: 3%;
+    }
+    @media (max-width: 360px) {
+        padding-right: 0;
+    }
+    justify-content: space-between;
+    margin-left: 0;
+    padding-right: 5%;
+}
+
+.comment-modal-body {
+    @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.comment-modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.js-modal-rating-container {
+    margin-top: 2px;
+}
+
+.customer-score-title {
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
+}
+
+.js-total-score {
+    color: #007AFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.rating-p {
+    @include media-breakpoint-between(sm, md) { 
+        font-size: 0.825rem;
+    }
+}

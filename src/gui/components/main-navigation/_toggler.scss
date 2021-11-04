@@ -1,0 +1,20 @@
+/*
+*  Main Nav Toggler
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.main-nav-toggler {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: $color-white;
+
+    &--mobile {
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+}

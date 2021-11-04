@@ -1,0 +1,80 @@
+/*
+*  Banner
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Banu
+*/
+
+.banner {
+    @include media-breakpoint-down(sm) {
+        padding: 20px;
+    }
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0;
+    background-color: $gray-700;
+
+    &:before {
+        @include media-breakpoint-up(md) {
+            background-size: cover;
+        }
+        @include size(100%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: no-repeat fixed center 0 ;
+        content: "";
+        filter: brightness(60%);
+    }
+
+    &__content {
+        @include media-breakpoint-down(sm) {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: $color-white;
+        }
+        position: relative;
+        font-family: $font-family-base;
+    }
+
+    &__title {
+        @include media-breakpoint-down(sm) {
+            position: relative;
+            margin: 0;
+            margin-bottom: .5rem;
+            color: #6F6F6F;
+            font-size: 19px;
+            text-align: left;
+        }
+        color: $color-white;
+        font-size: 32px;
+        font-weight: 800;
+        text-align: center;
+
+        &--dark {
+            color: #6F6F6F;
+            font-size: 19px;
+            font-weight: 600;
+            text-align: left;
+        }
+    }
+
+    &__description {
+        @include media-breakpoint-down(sm) {
+            position: relative;
+            margin: 0;
+            color: #989898;
+            font-size: 14px;
+            text-align: left;
+        }
+        color: $color-white;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+    }
+}
+
+

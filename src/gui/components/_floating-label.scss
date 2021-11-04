@@ -1,0 +1,147 @@
+.has-float-label {
+    display: block;
+    position: relative;
+
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 1px;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        font-size: 75%;
+        top: -.5em;
+        left: 0.75rem;
+        line-height: 1;
+        cursor: text;
+        opacity: 1;
+        z-index: 3;
+        &::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -.2em;
+            left: -.2em;
+            height: 2px;
+            background: white;
+            content: " ";
+            z-index: -1;
+        }
+    }
+
+    >span {
+        position: absolute;
+        top: -.5em;
+        left: 0.75rem;
+        padding: 0 1px;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        font-size: 75%;
+        line-height: 1; 
+        cursor: text;
+        opacity: 1;
+        z-index: 3;
+        &::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -.2em;
+            left: -.2em;
+            height: 2px;
+            background: white;
+            content: " ";
+            z-index: -1;
+        }
+    }
+    .form-control {
+        &::-webkit-input-placeholder {
+            -webkit-transition: all .2s;
+            transition: all .2s;
+            opacity: 1;
+        }
+        &::-moz-placeholder {
+            transition: all .2s;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder {
+            transition: all .2s;
+            opacity: 1;
+        }
+        &::placeholder {
+            -webkit-transition: all .2s;
+            transition: all .2s;
+            opacity: 1;
+        }
+        &:placeholder-shown {
+            &:not(:focus) {
+                &::-webkit-input-placeholder {
+                    opacity: 0;
+                }
+                &::-moz-placeholder {
+                    opacity: 0;
+                }
+                &:-ms-input-placeholder {
+                    opacity: 0;
+                }
+                &::placeholder {
+                    opacity: 0;
+                }
+                + {
+                    * {
+                        top: .75rem;
+                        font-size: 0.875rem;
+                        opacity: 0.6;
+                        z-index: 1;
+                    }
+                    p {
+                        opacity: 1;
+                    } 
+                }
+            }
+        }
+    }
+}
+.input-group {
+    .has-float-label {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 0;
+        .form-control {
+            width: 100%;
+            border-radius: 0.25rem;
+        }
+        &:not(:last-child) {
+            border-right: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            .form-control {
+                border-right: 0;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        &:not(:first-child) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            .form-control {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}

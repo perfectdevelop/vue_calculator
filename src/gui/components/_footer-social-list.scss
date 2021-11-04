@@ -1,0 +1,45 @@
+/*
+*  Footer Social List CSS Rules
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.footer-social-list {
+    @include media-breakpoint-down(md) {
+        justify-content: center;
+    }
+    display: flex;
+    margin: 20px 0;
+    padding-left: 0;
+
+    display: flex;
+    margin: 20px 0;
+    padding-left: 0;
+
+    li {
+        list-style: none;
+    }
+
+    @media screen and (max-width: 767px) {
+        .first-icon {
+            padding-left: 22px;
+        }
+    }
+
+    &__link {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__icon {
+        margin: 10px 20px;
+        color: $white;
+        font-size: 2em;
+        zoom: 0.9;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

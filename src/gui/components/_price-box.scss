@@ -1,0 +1,53 @@
+.price-box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px rem(20px);
+    background-color: #3E77CD;
+
+    &__title {
+        color: $color-white;
+        font-size: 19px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    &__content {
+        font-size: rem(14px);
+    }
+
+    &__agreement {
+        font-size: rem(12px);
+
+        a {
+            color: inherit;
+        }
+    }
+
+    &--shadow {
+        box-shadow: 0 15px 22px 0 rgba(0, 0, 0, .08);
+    }
+
+    &--center {
+        align-items: center;
+        padding: 23px 20px 24px;
+    }
+
+    &__form {
+        width: 100%;
+        color: $color-white;
+    }
+
+    &--result {
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem 0 0;
+        font-weight: bold;
+    }
+
+    p.funnel-form__error {
+        color: $color-white;
+    }
+}

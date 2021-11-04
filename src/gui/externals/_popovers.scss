@@ -1,0 +1,17 @@
+/*
+*  Popovers
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+
+.popover {  
+  box-shadow: 0 8px 8px 0 rgba(0, 0 , 0 , .1);
+}
+
+.bs-popover-top {
+  border-bottom: 5px solid $primary;
+}
+
+.bs-popover-bottom {
+  border-top: 5px solid $primary;
+}

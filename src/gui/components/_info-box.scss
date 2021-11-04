@@ -1,0 +1,33 @@
+/*
+*  Info Box
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Hakan Sarier <hakan@hesapkurdu.com>
+*/
+
+.info-box {
+    @include media-breakpoint-up(sm) {
+        display: block;
+    }
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    &__title {
+        @include media-breakpoint-up(sm) {
+            align-items: initial;
+            text-align: center;
+        }
+        align-items: center;
+        color: $color-text;
+        font-size: rem(16px);
+        text-align: left;
+    }
+
+    &__icon {
+        width: auto;
+        max-width: 20%;
+        height: auto;
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,37 @@
+/*
+*  Calculation of min subsistence allowance
+*  Hesapkurdu Arge
+*/
+
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+            background-size: 100% 100%;
+            filter: brightness(100%);
+       }
+        @include media-breakpoint-up(sm) {
+            background-image: url($path + "/images/banner/hesaplama-araci.jpg");
+       }
+    }
+}
+
+
+.tooltip-inner {
+    max-width: 300px;
+}
+
+.funnel-form__label {
+    i[data-toggle="tooltip"] {
+        vertical-align: middle;
+    }
+}
+
+.application-detail-list__elements {
+    line-height: 22px;
+
+    .solidbox {
+        text-align: center;
+    }
+}

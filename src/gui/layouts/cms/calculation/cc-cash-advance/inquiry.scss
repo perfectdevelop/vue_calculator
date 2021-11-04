@@ -1,0 +1,32 @@
+/*
+*  Calculation Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+            background-size: 100% 100%;
+            filter: brightness(100%);
+        }
+        @include media-breakpoint-up(sm) {
+            background-image: url($path + "/images/banner/kredi-karti-asgari-odeme.jpg");
+        }
+    }
+}
+
+.funnel-form {
+    @include media-breakpoint-down(sm) {
+        min-height: 293px;
+    }
+    @include media-breakpoint-up(sm) {
+        min-height: 353px;
+    }
+}
+
+.article div img:not(.product-card__logo) {
+    display: block;
+    margin: 0 auto 1rem auto;
+}

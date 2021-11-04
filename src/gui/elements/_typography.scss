@@ -1,0 +1,63 @@
+/*
+*  Heading
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+
+
+.text {
+    font-weight: 400;
+    &--offer {
+        color: #5790E6;
+        font-size: rem(10px);
+        line-height: 2.4;
+    }
+
+    &--fine-print {
+        color: $color-dark-gray;
+        font-size: rem(10px);
+        line-height: 2.4;
+        text-decoration: underline;
+    }
+
+    &--copy {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(16px);
+        }
+        color: $color-text;
+        font-size: rem(14px);
+
+        &-small {
+            color: $color-text;
+            font-size: rem(10px);
+        }
+
+        &-middle {
+            color: $color-text;
+            font-size: rem(12px);
+        }
+    }
+
+    &--small-link-copy {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(12px); 
+        }
+        color: $color-dark-gray;
+        font-size: rem(10px);
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    &--small-link-detail {
+        color: $color-text;
+        font-size: rem(14px); 
+        font-weight: 600;
+        text-decoration: underline;
+    }
+
+    &--overall {
+        color: $color-blue;
+        font-size: rem(14px);
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,82 @@
+/*
+*  Banner
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Banu
+*/
+
+.banner-home {
+    @include media-breakpoint-down(sm) {
+        min-height: 205px;
+        padding: 16px;
+    }
+    display: flex;
+    position: relative;
+    align-items: top;
+    width: 100%;
+    min-height: 350px;
+    padding: 50px;
+
+    &__content {
+        @include media-breakpoint-down(sm) { 
+            margin: 0;
+        }
+        position: absolute;
+        margin-left: 15%;
+    }
+
+    &__title {
+        @include media-breakpoint-down(sm) {
+            position: relative;
+            margin: 0;
+            margin-bottom: .5rem;
+            font-size: 21px;
+            text-align: left;
+        }
+        color: $color-gray;
+        font-size: 36px;
+        font-weight: 800;
+        text-align: left;
+
+        &--dark {
+            color: #6F6F6F;
+            font-size: 19px;
+            font-weight: 600;
+            text-align: left;
+        }
+    }
+
+    &__description {
+        @include media-breakpoint-down(sm) {
+            position: relative;
+            margin: 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        color: $color-gray;
+        font-size: 20px;
+        font-weight: normal;
+        text-align: left;
+        text-shadow: 2px 1px 0 #FFFFFF;
+    }
+
+    &:before {
+        @include media-breakpoint-down(sm) {
+            @include size(100%, 100%);
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/anasayfa-mobile.svg");
+            background-position: 120% 90%;
+            background-size: 60%;
+        }
+        @include size(100%, 98%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: no-repeat;
+        background-image: url($path + "/images/banner/anasayfa-desk.svg");
+        background-position: 80% top;
+        background-size: contain;
+        content: "";
+    }
+}
+
+

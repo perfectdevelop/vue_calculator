@@ -1,0 +1,46 @@
+/*
+*  Accordion
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Hakan Sarier <hakan@hesapkurdu.com>
+*/
+
+@import "../utils/animation/rotate";
+
+.accordion-container {
+    color: $color-text;
+    .accordion {
+        border-top: 1px solid rgba(0, 0, 0, .09);
+
+        &__title {
+            @include media-breakpoint-up(sm) {
+                font-size: rem(16px);
+            }
+            @include hk-icon-(dropdown, after);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 0;
+            padding: 1rem 0;
+            background: transparent;
+            color: inherit;
+            font-size: rem(14px);
+            font-weight: 600;
+            line-height: 1.5rem;
+            text-align: left;
+            white-space: normal;
+            cursor: pointer;
+        }
+
+        &:first-child {
+            border: none;
+        }
+        &:last-child {
+            border-bottom: 1px solid rgba(0, 0, 0, .09);
+        }
+    }
+    &__footer {
+        margin: 1rem 0;
+        text-align: right;
+    }
+}

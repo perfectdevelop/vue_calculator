@@ -1,0 +1,19 @@
+/*
+*  Text Colors
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+
+.text-color {
+    &--success {
+        color: #22b14c !important;
+    }
+
+    &--danger {
+        color: #e14c41 !important;
+    }
+
+    &--default {
+        color: $color-text;
+    }
+}

@@ -1,0 +1,75 @@
+/*
+*  Modal Fullscreen
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Hakan Sarier <hakan@hesapkurdu.com>
+*/
+
+.modal-fullscreen {
+    &__close {
+        display: flex;
+        position: absolute;
+        top: rem(10px);
+        right: rem(10px);
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        z-index: 9;
+
+        &--relative {
+            position: relative;
+            top: 0;
+            right: rem(6px);
+        }
+    }
+
+    &-header {
+        align-items: center;
+        padding: 0;
+        background: $color-white;
+        color: $color-white;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+
+        &__text {
+            @include media-breakpoint-up(sm) {
+                margin-bottom: 0;
+            }
+            margin-bottom: rem(10px);
+            color: $color-gray;
+            font-size: rem(14px);
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        &__logo {
+            @include media-breakpoint-down(md) {
+                margin-top: rem(10px);
+            }
+            width: auto;
+            height: 50px;
+        }
+    }
+
+    &-body {
+        position: relative;
+        height: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0;
+        overflow-y: hidden;
+        .container {
+            position: absolute;
+            left: 50%;
+            height: 100%;
+            // padding: 0;
+            transform: translateX(-50%);
+            overflow-y: auto;
+        }
+    }
+
+    .modal-dialog,
+    .modal-content {
+        @include size(100%);
+        border-radius: 0;
+        overflow: hidden;
+    }
+}

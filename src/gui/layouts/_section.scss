@@ -1,0 +1,42 @@
+/*
+*  Homepage
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.section {
+    @include media-breakpoint-down(sm) {
+        padding: 2rem 0;
+    }
+    padding: 3rem 0;
+
+    &--no-padding {
+        padding: 0;
+    }
+
+    &--gray {
+        background-color: $gray-100;
+    }
+
+    &--mobile-full {
+        @include media-breakpoint-down(sm) {
+            & > .container,
+            & > .col-md-12,
+            & > .col-12 {
+                padding-right: 0;
+                padding-left: 0;
+            } 
+
+            & > .row {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }        
+    }
+}
+
+.container {
+    @include media-breakpoint-down(md) {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}

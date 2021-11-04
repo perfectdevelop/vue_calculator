@@ -1,0 +1,153 @@
+/*
+*  CMS Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.article {
+    div, p {
+        color: $gray-600;
+        font-size: rem(16px);
+        font-weight: 400;
+        line-height: rem(24px);
+    }
+    
+    h1 {
+        margin: 2rem 0 1rem;
+        color: $color-text;
+        font-size: rem(21px);
+        font-weight: 800;
+        line-height: rem(30px);
+        
+        &:first-of-type {
+            @include media-breakpoint-down(sm) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    h2 {
+        margin: 2rem 0 1rem;
+        color: $color-text;
+        font-size: rem(19px);
+        font-weight: 700;
+        line-height: rem(27px);
+    }
+
+    h3 {
+        margin: 2rem 0 1rem;
+        color: $color-text;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: rem(22px);
+    }
+
+    h4 {
+        margin: 2rem 0 1rem;
+        color: $color-text;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: rem(20px);
+    }
+
+    span:not(.no-color) {
+        color: #737373;
+    }
+
+    hr {
+        margin: 1rem auto;
+        border: 0;
+        border-top: rem(1px) solid #E4E3E3;
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+
+    div img:not(.insurance-content__logo):not(.product-card__logo):not(.brands__image) {
+        @include media-breakpoint-up(sm) {
+            width: 500px; 
+            height: 330px; 
+        }
+
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: 0 0 1rem;
+    }
+
+    .button-apply {
+        display: block;
+        min-height: 40px;
+        margin: 0 0 1rem;
+        padding: 10px;
+        transition: background-color .15s ease-in-out;
+        border-radius: .3rem;
+        border-color: $secondary;
+        background-color: $secondary;
+        color: $color-white;
+        font-size: 1rem;
+        text-align: center;
+
+        &:hover {
+            border-color: #2B73DF;
+            background-color: #367AE1;
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+    .read-time-container {
+        padding: 0 3px;
+        border: 1px solid $color-text;
+        border-radius: 5px;
+        font-size: .750rem;
+    }
+
+    .hk-icon--clock {
+        &::before {
+            margin: auto;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.text {
+    @include media-breakpoint-up(sm) {
+        font-size: rem(16px); 
+    }
+
+    color: $color-text;
+    font-size: rem(14px);
+    font-weight: 400;
+
+    &--info {
+        display: block;
+        margin-bottom: .5rem;
+        font-size: rem(14px);
+    }
+
+    &--copyright {
+        font-size: rem(13px);
+        font-style: italic;
+    }
+}
+
+.contentpage-date {
+    .desktop-parser {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    .read-time-container {
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            align-items: center;
+            max-width: fit-content;
+
+            .hk-icon--clock {
+                display: flex;
+                margin-right: 3px;
+            }
+        }
+    }
+}

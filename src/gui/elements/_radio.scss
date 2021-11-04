@@ -1,0 +1,74 @@
+/*
+*  Radio Buttons
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+
+.radio {
+    position: relative;
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        opacity: 0;
+
+        & ~ .radio__label {
+            position: relative;
+            padding-left: 20px;
+            color: $color-text;
+            font-size: 14px;
+        }
+
+        & ~ .radio__label--white {
+            position: relative;
+            padding-left: 20px;
+            color: $color-white;
+            font-size: 14px;
+        }
+
+        & ~ .radio__label::before {
+            @include size(16px, 16px);
+            position: absolute;
+            top: 1px;
+            left: 0;
+            border: 1px solid $secondary;
+            border-radius: 50%;
+            content: "";
+        }
+
+        
+        & ~ .radio__label--white::before {
+            @include size(16px, 16px);
+            position: absolute;
+            top: 1px;
+            left: 0;
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            content: "";
+        }
+    }
+
+    input:checked {
+        & ~ .radio__label::after {
+            @include size(12px, 12px);
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            margin: 0;
+            border-radius: 50%;
+            background-color: $secondary;
+            content: "";
+        }
+
+        & ~ .radio__label--white::after {
+            @include size(12px, 12px);
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            margin: 0;
+            border-radius: 50%;
+            background-color: $color-white;
+            content: "";
+        }
+    }
+}

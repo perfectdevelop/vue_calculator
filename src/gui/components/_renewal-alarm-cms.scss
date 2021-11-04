@@ -1,0 +1,145 @@
+/*
+*  Renewal Alarm CMS Pages
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.renewal-alarm {
+    padding: 15px rem(20px);
+    background-color: #3E77CD;
+    color: $color-white;
+    font-size: rem(14px);
+
+    &--toggle {
+        cursor: pointer;
+        .iconScrollup {
+            display: inline-flex;
+            vertical-align: middle;
+        }        
+    }
+
+    .toggle-text {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(19px);
+        }
+    }
+
+    h2 {
+        @include media-breakpoint-down(sm) {
+            font-size: rem(16px);
+        }
+    }
+
+    &__icon {        
+        vertical-align: middle;
+    }
+
+    p.funnel-form__error {
+        color: $color-white;
+    }
+
+    .calculation__form {
+        p.funnel-form__error {
+            position: relative;
+            bottom: .5rem;
+        }
+    }
+
+    .js-mask-plate {
+        text-transform: uppercase;
+        
+        &::placeholder { 
+            text-transform: none; 
+        }
+    }
+
+    &--result {
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem 0 0;
+        font-weight: bold;
+    }
+
+    &__agreement {
+        font-size: rem(12px);
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+}
+
+.article {
+    
+    .renewal-alarm {
+        padding: 15px rem(20px);
+        background-color: #3E77CD;
+        color: $color-white;
+        font-size: rem(14px);
+    
+        h2 {
+            @include media-breakpoint-down(sm) {                
+                font-size: rem(16px);
+            }
+            margin-top: 0;
+            margin-bottom: .5rem;
+            color: $color-white;
+        }
+
+        p {
+            color: $color-white;
+        }
+
+        &__subtitle {
+            margin-top: 0;
+            font-size: rem(14px);
+        }
+    
+        &__icon {
+            color: $color-white;
+
+            vertical-align: middle;
+        }
+    
+        p.funnel-form__error {
+            color: $color-white;
+        }
+    
+        .calculation__form {
+            p.funnel-form__error {
+                position: relative;
+                bottom: .5rem;
+            }
+        }
+    
+        .js-mask-plate {
+            text-transform: uppercase;
+            
+            &::placeholder { 
+                text-transform: none; 
+            }
+        }
+    
+        &--result {
+            display: flex;
+            justify-content: center;
+            margin: 0.5rem 0 0;
+            font-weight: bold;
+        }
+    
+        &__agreement {
+            font-size: rem(12px);
+    
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+.renewal-alarm.off {
+    .iconScrollup {
+        transform: rotate(180deg) translateY(2px);
+    }
+}

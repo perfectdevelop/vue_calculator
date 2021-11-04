@@ -1,0 +1,69 @@
+/*
+*  Select
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+
+@import "../utils/animation/rotate";
+
+.select {
+    @include hk-icon-(dropdown, after);
+    display: block;
+    position: relative;
+    height: 40px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    background-color: $white;
+    color: #000;
+    font-weight: 300;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: rem(-12px);
+        color: #9B9B9B;
+        z-index: 1;
+    }
+
+    &__element {
+        @include size(100%, 100%);
+        position: relative;
+        padding-left: 10px;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 2;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        option {
+            font-weight: 300;
+        }
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:focus {
+            border: 0;
+        }
+    }
+
+    &--block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .select__element {
+        padding-left: rem(5px);
+    }
+    .select:after {
+        top: 50%;
+        right: rem(5px);
+        margin-top: rem(-8px);
+        font-size: 11px;
+    }
+}

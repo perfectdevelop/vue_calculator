@@ -1,0 +1,55 @@
+/*
+*  Rent Increase Calculate Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.banner::before {
+    @include media-breakpoint-down(sm) {
+        background-attachment: scroll;
+        background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+        background-size: 100% 100%;
+        filter: brightness(100%);
+    }
+    @include media-breakpoint-up(sm) {
+        background-image: url($path + "/images/banner/kredi-hesaplama.jpg");
+    }
+}
+
+.funnel-form {
+    @include media-breakpoint-down(sm) {
+        min-height: 293px;
+    }
+    @include media-breakpoint-up(sm) {
+        min-height: 353px;
+    }
+}
+
+.date {
+    &--noSpinner {
+        @include hk-icon-(calendar, after);
+        &::after {
+            position: absolute;
+            right: 8px;
+            opacity: 0.9;
+            z-index: 0;
+        }
+    }
+
+    &--noSpinner::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    &--noSpinner::-webkit-calendar-picker-indicator {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 100%;
+        margin-left: 10px;
+        padding: 0;
+        background: none;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 10;
+    }
+}

@@ -1,0 +1,85 @@
+/*
+*  Feature Box
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Hakan Sarier <hakan@hesapkurdu.com>
+*/
+.feature-box {
+    @include media-breakpoint-up(sm) {
+        display: flex;
+        align-items: center;
+        height: 115px;
+    }
+    display: block;
+    height: rem(145px);
+    margin: .35rem 0;
+    padding: 1rem;
+    background-color: $color-white;
+    text-align: center;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
+
+    &--small {
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+        height: 64px;
+        &__title {
+            @include media-breakpoint-down(sm) {
+                margin-left: .50rem;
+            }
+            margin-top: .75rem;
+            color: $color-text;
+            font-size: rem(14px);
+            font-weight: normal;
+            line-height: 1.25;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &__icon {
+        @include media-breakpoint-up(sm) {
+            margin-right: 1.5rem;
+            margin-left: 1rem;
+        }
+        width: auto;
+        max-width: 50px;
+        height: auto;
+    }
+
+    &__img {
+        @include media-breakpoint-up(sm) {
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+        color: $color-dark-gray;
+    }
+
+    &__title {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(16px);
+            text-align: left;
+        }
+        margin-top: .75rem;
+        color: $color-text;
+        font-size: rem(14px);
+        font-weight: normal;
+        line-height: 1.25;
+    }
+
+    &__button {
+        width: 100%;
+        border: 0;
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &:hover {
+        transition: all .3s ease-in-out;
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+}

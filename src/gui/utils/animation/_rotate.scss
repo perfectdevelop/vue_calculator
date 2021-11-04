@@ -1,0 +1,14 @@
+/*
+*  Rotate Animations
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.rotateOver:after {
+    transform: rotate( 180deg ) !important;            
+    transition: transform 300ms ease !important;
+}
+
+.rotateOut:after {
+    transform: rotate( 0deg ) !important;            
+    transition: transform 300ms ease !important;
+}

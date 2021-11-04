@@ -1,0 +1,29 @@
+/*
+*  Product Card
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.card {
+    position: relative;
+    margin: 10px 0;
+    border: solid rem(1px) rgba(155, 155, 155, 0.32);
+    background-color: $color-white;
+    font-family: $font-family-base;
+    box-shadow: 0 rem(10px) rem(10px) 0 rgba(0, 0, 0, 0.1);
+
+    &__content {
+        @include media-breakpoint-up(md) {
+            align-items: center;
+        }
+        padding: rem(20px);
+    }
+
+    &__copy--heading {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(20px); 
+        }
+        font-size: rem(16px);
+        font-weight: 800;
+        line-height: 1;
+    }
+}

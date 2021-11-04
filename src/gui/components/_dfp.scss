@@ -1,0 +1,104 @@
+/*
+*  Feature Box
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.dfp {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+
+    &__btn--close {
+        position: absolute;
+        top: -.75rem;
+        right: -.75rem;
+        padding: 7px;
+        border-radius: 50%;
+        background-color: $color-white;
+        color: $primary;
+        font-family: hk-font-icon;
+        font-size: .75rem;
+        line-height: 12px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .35);
+        cursor: pointer;
+        z-index: 99;
+    }
+
+    &--desktop {
+        @include media-breakpoint-up(sm) {
+            display: block;
+        }
+
+        display: none;
+    }
+
+    &--sms-redirect {
+        @include media-breakpoint-up(sm) {
+            display: none;
+        }
+
+        display: block;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &--mobile {
+        @include media-breakpoint-up(sm) {
+            display: none;
+        }
+        // display: none;
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%);
+
+        &__scroll {
+            position: relative;
+            bottom: 0;
+        }
+
+        .dfp__btn--close {
+            right: 0;
+        }
+    }
+
+    &__native {
+        @include media-breakpoint-up(sm) {
+            justify-content: start;
+        }
+
+        @include media-breakpoint-up(lg) {
+            justify-content: space-around;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // set max-height zero for animation
+        max-height: 0;
+        overflow: hidden;
+
+        &--desktop {
+            @include media-breakpoint-up(sm) {
+                display: flex;
+            }
+
+            display: none;
+        }
+
+        &--mobile {
+            @include media-breakpoint-up(sm) {
+                display: none;
+            }
+
+            display: flex;
+        }
+
+        .product-card__content {
+            padding: 1rem 0;
+        }
+    }
+}

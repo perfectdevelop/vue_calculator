@@ -1,0 +1,38 @@
+/*
+*  Interim Loan Calculate Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+            background-size: 100% 100%;
+            filter: brightness(100%);
+        }
+        @include media-breakpoint-up(sm) {
+            background-image: url($path + "/images/banner/hesaplama-araci.jpg");
+        }
+    }
+}
+
+.banner__content {
+    width: 100%;
+}
+
+.funnel-form {
+    @include media-breakpoint-down(sm) {
+        min-height: 520px;
+    }
+    @include media-breakpoint-up(sm) {
+        min-height: 580px;
+    }
+}
+
+.calculation-results {
+    .table td,
+    .table th {
+        white-space: nowrap;
+    }
+}

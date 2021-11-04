@@ -1,0 +1,28 @@
+.day-counter { 
+    @include media-breakpoint-down(sm) {
+        font-size: 0.7rem;
+    }
+    @media (max-width: 359px) {
+        font-size: 0.5rem;
+    }
+    @media (min-width: 360px) and (max-width: 376px) {
+        font-size: 0.6rem;
+    }
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 15px;
+    background-color: #0A82FA;
+    color: $color-white;
+    &> i {
+        @include media-breakpoint-down(sm) {
+            font-size: 0.9rem;
+        }
+        @media (max-device-width: 415px) {
+            display: none;
+        }
+        margin-top: 1%;
+    }
+}

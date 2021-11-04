@@ -1,0 +1,14 @@
+/*
+*  Expand Collapse Link
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.expand-collapse-link {
+    color: inherit;
+    font-size: rem(12px);
+    font-weight: 600;
+    text-decoration: underline;
+    &--product {
+        color: #737373;
+    }
+}

@@ -1,0 +1,118 @@
+/*
+*  Loan Calculator Index Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.main-nav-toggler--mobile {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .2);
+    z-index: 2;
+}
+
+.banner {
+    @include media-breakpoint-down(sm) {
+        padding: 20px 0;
+        &::before {
+            background: $color-white none;
+            filter: none;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &::before {
+            background-image: url($path + "/images/banner/loan-interest-rate.jpg");
+            background-size: 100% 100%;
+        }
+    }
+
+    &__content {
+        @include media-breakpoint-down(sm) {
+            width: calc(100% - 32px);
+            padding: 0;
+        }
+    }
+}
+
+.section {
+    &--hk-offer {
+        height: 0;
+        padding: 0;
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.product-card {
+    margin: 10px 0;
+}
+
+.funnel-form {
+    @include media-breakpoint-up(sm) {
+        width: 535px;
+        margin: 0 auto;
+    }
+}
+
+.tab-button {
+    @include media-breakpoint-down(sm) {
+        height: rem(90px);
+    }
+    height: rem(98px);
+    padding: 0;
+
+    &:focus,
+    &--active {
+        height: 90%;
+    }
+
+    &__title {
+        padding: 0;
+        /* iphone 5/se ekrani icin font boyutu degisikligi*/
+        @media (device-height: 568px) and (device-width: 320px) {
+            font-size: rem(11px);
+        }
+    }
+}
+
+.best-rate {
+    @include media-breakpoint-down(sm) {
+        padding: 10px 5px;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
+    }
+    padding-bottom: 20px;
+
+    &__icon {
+        &--text-color {
+            height: 100%;
+            color: $color-text;
+            line-height: 1;
+        }
+
+        &--down {
+            color: #22B14C;
+        }
+
+        &--up {
+            color: $primary;
+        }
+
+        &--equal {
+            color: #FFD700;
+        }
+    }
+}
+
+.sticky-header--is-bg {
+    background: $gray-100;
+}
+
+.btn-transparent--tiny {
+    padding: .75rem 0;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.loading {
+    border-radius: 10px;
+}

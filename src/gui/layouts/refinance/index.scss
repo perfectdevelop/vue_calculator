@@ -1,0 +1,45 @@
+/*
+*  Refinance Index Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile.jpg");
+            background-size: 100% 100%;
+        }
+        background-image: url($path + "/images/banner/kredi-yapilandirma.jpg");
+        background-position: 0 100%;
+    }
+  }
+
+.funnel-form {
+    @include media-breakpoint-up(sm) {
+        width: 535px;
+        margin: 0 auto;
+    }
+}
+
+.list-group {
+    @include media-breakpoint-up(sm) {
+        height: 100%;
+    }
+}
+
+.btn-refinance-order {
+    order: -1;
+    margin-bottom: rem(8px);
+}
+
+.modal-header {
+    align-items: center;
+}
+
+.recalculate-loading {
+    height: 0;
+    transition: height .35s ease-out;
+    &--animated {
+        height: 100px;
+    }
+}

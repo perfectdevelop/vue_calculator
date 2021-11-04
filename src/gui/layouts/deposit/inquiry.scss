@@ -1,0 +1,54 @@
+/*
+*  Deposit Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.section {
+    &--testimonial,
+    &--statics {
+        @include media-breakpoint-down(sm) {
+            .container,
+            .col-md-12 {
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            .row {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &--testimonial {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+            background-size: 100% 100%;
+        }
+        @include media-breakpoint-up(sm) {
+            background-image: url($path + "/images/banner/mevduat.jpg");
+            background-position: 0 100%;
+        }
+    }
+}
+
+.funnel-form {
+    @include media-breakpoint-up(sm) {
+        width: 535px;
+        margin: 0 auto;
+    }
+}
+
+.list-group {
+    @include media-breakpoint-up(sm) {
+        height: 100%;
+    }
+}

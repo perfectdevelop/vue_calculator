@@ -1,0 +1,65 @@
+/*
+*  Checkbox
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+
+.checkbox {
+    position: relative;
+    color: $color-text;
+    font-size: 14px;
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        opacity: 0;
+
+        & ~ .checkbox__label {
+            position: relative;
+            padding: 1px 0 0 25px;
+            color: $color-text;
+            font-size: 14px;
+        }
+
+        & ~ .checkbox__label::before {
+            @include size(16px, 16px);
+            position: absolute;
+            top: 1px;
+            left: 0;
+            border: 1px solid $secondary;
+            border-radius: 2px;
+            content: "";
+        }
+    }
+
+    input:checked {
+        &:disabled {
+            & ~ .checkbox__label::after {
+                opacity: 0.75;
+            }
+            & ~ .checkbox__label::before {
+                border: 1px solid #B6C0CE;
+                background: rgba(87, 144, 230, 0.4);
+            }
+            & ~ .checkbox__label {
+                cursor: not-allowed;
+            }
+        }
+        & ~ .checkbox__label {
+            @include hk-icon-(ok, after);
+        }
+        & ~ .checkbox__label::after {
+            @include size(12px, 12px);
+            position: absolute;
+            top: 2px;
+            left: 3px;
+            margin: 0;
+            border-radius: 1px;
+            color: $color-white;
+            font-size: 10px;
+        }
+        & ~ .checkbox__label::before {
+            background: $secondary;
+        }
+    }
+}

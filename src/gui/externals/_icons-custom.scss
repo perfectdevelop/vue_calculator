@@ -1,0 +1,43 @@
+/*
+*  Font Icon Extra Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.hk-icon {
+    &--0-8x {
+        font-size: 0.8em;
+    }
+    
+    &--1-2x {
+        font-size: 1.2em;
+    }
+
+    &--1-5x {
+        font-size: 1.5em;
+    }
+
+    &--2x {
+        font-size: 2em;
+    }
+
+    &--3x {
+        font-size: 3em;
+    }
+    
+    &--4x {
+        font-size: 4em;
+    }
+    
+    &--6x {
+        font-size: 6em;
+    }    
+
+    &--8x {
+        font-size: 8em;
+    }    
+}
+
+[class^="hk-icon"] {
+    display: inline-block;
+    line-height: .75;
+}

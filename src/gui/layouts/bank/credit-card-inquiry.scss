@@ -1,0 +1,358 @@
+/*
+*  Bank Credit Card Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.banner {
+    &--cc {
+        &::before {
+            @include media-breakpoint-down(sm) {
+                background-attachment: scroll;
+                background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+                background-size: 100% 100%;
+            }
+            background-image: url($path + "/images/banner/banka-kredi-karti.jpg");
+            background-position: 0 100%;
+        }
+    }
+}
+
+.funnel-form {
+    @include media-breakpoint-up(sm) {
+        width: 535px;
+        margin: 0 auto;
+    }
+    &__section--hidden {
+        height: 0;
+        transition: all .3s;
+        opacity: 0;
+    }
+    &__section--show {
+        height: rem(107px);
+        opacity: 1;
+    }
+}
+
+.list-group {
+    @include media-breakpoint-up(sm) {
+        height: 100%;
+    }
+}
+
+.tab-button {
+    @include media-breakpoint-down(sm) {
+        height: rem(90px);
+    }
+    &:focus, &--active {
+        height: 90%;
+    }
+    height: rem(98px);
+    padding: 0;
+    &__title {
+        padding: 0;
+        /* iphone 5/se ekrani icin font boyutu degisikligi*/
+        @media (device-height: 568px) and (device-width: 320px) {
+            font-size: rem(11px);
+        }
+    }
+}
+
+.tab-section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    &__scroll--x {
+        padding-bottom: .3rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .flex-grow-1 {
+            flex: 0 0 29%;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        @include media-breakpoint-up(sm) {
+            overflow: hidden;
+            .flex-grow-1 {
+                flex: 0 0 18%;
+            }
+        }
+    }
+}
+
+.rating-container {
+    padding: 0;
+}
+
+.feature-box {
+    height: 100%;
+    padding: 1rem 1rem 0;
+    &__logo {
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+        }
+        width: 100%;
+        height: auto;
+    }
+    @include media-breakpoint-up(sm) {
+        padding: 1rem;
+    }
+}
+
+.nav {
+    @include media-breakpoint-up(sm) {
+        justify-content: center;
+    }
+    overflow-x: auto;
+    &-item {
+        @include media-breakpoint-down(sm) {
+            flex: 0 0 38%;
+        }
+        align-self: flex-end;
+        white-space: nowrap;
+    }
+    &--border a {
+        @include media-breakpoint-down(sm) {
+            padding: 0 0 rem(5px);
+        }
+    }
+}
+
+.product-card {
+    &__logo {
+        @include media-breakpoint-down(sm) {
+            width: 30%;
+            height: 100%;
+        }
+    }
+    &__value--wrap {
+        width: 75px;
+    }
+}
+
+.js-comment-modal-logo {
+    width: 6.25rem;
+}
+
+.js-toggle-cc-cards {
+    justify-content: center;
+    span {
+        align-self: center;
+        vertical-align: middle;
+    }
+}
+
+.expandable-product-card__list {
+    h1 {
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.fixed-link {
+    height: 100%;
+    a {
+        text-decoration: none;
+    }
+}
+
+.iconScrolldown {
+    transform: rotate(180deg) translateY(2px);
+}
+
+.rating-score-text {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: 0;
+    }
+    margin-left: 3px;
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rateyo-stars {
+    margin-top: 2px;
+}
+
+.overall__text {
+    padding-top: 1px;
+    color: #007AFF;
+    font-weight: 700;
+}
+
+.cursor--pointer {
+    padding-left: 5px;
+}
+
+.cursor--pointer[data-toggle="tooltip"]::before {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: no-repeat;
+    background-image: url($path + "/images/question.svg");
+    background-size: contain;
+    content: " ";
+    filter: none;
+}
+
+.tooltip-inner-div {
+    text-align: left;
+}
+
+.ratings {
+    margin-right: 0;
+    padding-top: 10px;
+}
+
+.online-application-desktop {
+    float: right;
+}
+
+.campaigns-advantages-desktop {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        margin-left: 15%;
+    }
+    @media (min-width: 676px) and (max-width: 767px) {
+        margin-left: 10%;
+    }
+    @media (max-width: 675px) {
+        margin-left: 0;
+    }
+    margin-left: 20%;
+}
+
+.ratings-mobile {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        font-size: 0.8rem;
+    }
+    font-size: 0.9rem;
+}
+
+.ratings-row {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: -8px;
+        padding-right: 3%;
+    }
+    @media (max-width: 360px) {
+        padding-right: 0;
+    }
+    justify-content: space-between;
+    margin-left: 0;
+    padding-right: 5%;
+}
+
+.comment-modal-body {
+    @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.comment-modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.js-modal-rating-container {
+    margin-top: 2px;
+}
+
+.js-total-score {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.rating-p {
+    @include media-breakpoint-between(sm, md) { 
+        font-size: 0.825rem;
+    }
+}
+
+.card-name-text {
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
+}
+
+.desktop-apply-button {
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+    @include media-breakpoint-up(lg) {
+        left: 15%;
+    }
+    @include media-breakpoint-down(lg) {
+        left: 10%;
+    }
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mobile-apply-button {
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* iphone 5/se */
+.modal-application-btn {
+    @media (device-height: 568px) and (device-width: 320px) {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    @include media-breakpoint-up(sm) {
+        width: 60%;
+    }
+}
+
+.campaign-modal-top-row {
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 3%;
+    }
+}
+
+.modal-top-row {
+    @include media-breakpoint-down(xs) {
+        padding-bottom: 0;
+    }
+}
+
+.contiuneRow {
+    @include media-breakpoint-up(md) {
+        position: relative;
+        top: -20px;
+        right: 10px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        top: -90px;
+    }
+}
+
+.tooltip-container-desktop {
+    max-width: fit-content;
+    margin-left: 0;
+    padding-top: 4px;
+}
+
+.overall-tooltip {
+    padding-left: 5px;
+    float: right;
+}
+
+.overall-tooltip-mobile {
+    padding-top: 4px;
+}

@@ -1,0 +1,51 @@
+/*
+*  Nav
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Banu
+*/
+
+@import "node_modules/bootstrap/scss/nav";
+
+.tab-section {
+    margin: rem(10px) auto 0;
+}
+
+.nav {
+    flex-wrap: nowrap;
+    &-link {
+        padding: 0 rem(36px) rem(4px);
+        border: none;
+        outline: none;
+        background: none;
+        color: $color-gray;
+        font-size: rem(14px);
+        &.active {
+            border-bottom: rem(4px) solid $primary;
+            color: $primary;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.tab-section--scrollable {
+    .nav {
+        @include media-breakpoint-up(sm) {
+            justify-content: center;
+        }
+        overflow-x: auto;
+        &-item {
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 38%;
+            }
+            align-self: flex-end;
+            white-space: nowrap;
+        }
+        &--border a {
+            @include media-breakpoint-down(sm) {
+                padding: 0 0 rem(5px);
+            }
+        }
+    }
+}

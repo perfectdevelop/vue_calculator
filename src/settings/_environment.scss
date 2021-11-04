@@ -1,0 +1,22 @@
+/*
+* Environment.
+*/
+
+$env: "production" !default; 
+$path: "https://cdn.hesapkurdu.com" !default;
+
+@if($env == "production") {
+    $path: "https://cdn.hesapkurdu.com";
+}
+
+@if($env == "staging") {
+    $path: "https://cdn-staging.hesapkurdu.com";
+}
+
+@if($env == "styleguide") {
+    $path: "http://assets.hesapkurdu.com/style-guide/assets";
+}
+
+@if($env == "test") {
+    $path: "/app";
+}

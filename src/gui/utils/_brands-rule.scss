@@ -1,0 +1,20 @@
+/*
+*  Brands Standart Rule
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.brands {
+    @include media-breakpoint-up(md) {
+        min-width: calc(12.5% - 8px);
+        max-width: calc(12.5% - 8px);        
+    }
+    min-width: calc(33.3% - 8px);
+    max-width: calc(33.3% - 8px);
+    margin: 4px; 
+    
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

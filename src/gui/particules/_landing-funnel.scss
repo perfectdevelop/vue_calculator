@@ -1,0 +1,162 @@
+.banner__content {
+    .funnel-form {
+        @include media-breakpoint-down(sm) {
+            margin-top: 1rem;
+        }
+        @include media-breakpoint-up(sm) {
+            width: 520px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        text-align: left;
+
+        .loading {
+            @include media-breakpoint-down(sm) {
+                left: -10px;
+                width: 105%;
+            }
+        }
+
+        .koalay-info {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            color: $color-text;
+            font-size: 12px;
+        }
+
+        .agreement__checkbox {
+            .checkbox__label {
+                &:before {
+                    top: 4px;
+                }
+    
+                &:after {
+                    top: 5px;
+                }
+            }
+        }
+    }
+}
+
+.section-advice {
+    background-color: $gray-100;
+
+    .feature-box {
+        height: 6.5625rem;
+        padding: 0.4rem;
+        background-color: transparent;
+        box-shadow: none;
+
+        &__icon {
+            @include media-breakpoint-down(sm) {
+                max-width: 40px;
+            }
+        }
+        
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+}
+
+.newcar-checbox-container {
+    min-width: 300px;
+}
+
+.agreement__container {
+    @include media-breakpoint-up(sm) {
+        margin-top: 1rem;
+    }
+  }
+
+.agreement__checkbox {
+    display: flex;
+    flex-direction: column-reverse;
+    .funnel-form__error {
+        margin-top: 1rem;
+    }
+
+    span {
+        font-size: 12px;
+    }
+  }
+
+.tab__container {
+    text-align: center;
+
+    .tab__column {
+        cursor: pointer;
+
+        span {
+            color: $color-text;
+            font-size: 14px;
+        }
+
+        div {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $primary;
+
+            &:after {
+                position: absolute;
+                right: 5px;
+                bottom: 0;
+                width: 96%;
+                transition: border .1s;
+                border-bottom: 0 solid $primary;
+                content: "";
+            }
+        }
+    }
+
+    .active__tab {
+        div {
+            &:after {
+                border-bottom: 3px solid $primary;
+            }
+        }
+    
+        span {
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+}
+
+.new-car__tab {
+    &:before {
+        position: absolute;
+        bottom: 0;
+        left: -8px;
+        width: 16px;
+        border-bottom: 1px solid $primary;
+        content: "";
+    }
+}
+
+input:disabled {
+    background-color: rgba(113, 113, 113, .1);
+    cursor: not-allowed;
+}
+
+.js-mask-plate {
+    text-transform: uppercase;
+}
+.section--slider {
+    .banner-swiper {
+        @include media-breakpoint-up(sm) {
+            height: 108px;
+            margin: 8px 0;
+        }
+    }
+}
+
+.section--banner {
+    @include media-breakpoint-up(sm) {
+        padding: 4rem 0;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

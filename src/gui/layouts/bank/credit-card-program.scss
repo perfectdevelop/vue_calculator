@@ -1,0 +1,144 @@
+/*
+*  Bank Credit Card Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.list-group {
+    @include media-breakpoint-up(sm) {
+        height: 100%;
+    }
+}
+
+.tab-button {
+    @include media-breakpoint-down(sm) {
+        height: rem(90px);
+    }
+    &:focus, &--active {
+        height: 90%;
+    }
+    height: rem(98px);
+    padding: 0;
+    &__title {
+        padding: 0;
+        /* iphone 5/se ekrani icin font boyutu degisikligi*/
+        @media (device-height: 568px) and (device-width: 320px) {
+            font-size: rem(11px);
+        }
+    }
+}
+
+.tab-section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    &__scroll--x {
+        padding-bottom: .3rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .flex-grow-1 {
+            flex: 0 0 29%;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        @include media-breakpoint-up(sm) {
+            overflow: hidden;
+            .flex-grow-1 {
+                flex: 0 0 18%;
+            }
+        }
+    }
+}
+
+.rating-container {
+    padding: 0;
+}
+
+.feature-box {
+    height: 100%;
+    padding: 1rem 1rem 0;
+    &__logo {
+        @include media-breakpoint-up(sm) {
+            width: 50%;
+        }
+        width: 100%;
+        height: auto;
+    }
+    @include media-breakpoint-up(sm) {
+        padding: 1rem;
+    }
+}
+
+.nav {
+    @include media-breakpoint-up(sm) {
+        justify-content: center;
+    }
+    overflow-x: auto;
+    &-item {
+        @include media-breakpoint-down(sm) {
+            flex: 0 0 38%;
+        }
+        align-self: flex-end;
+        white-space: nowrap;
+    }
+    &--border a {
+        @include media-breakpoint-down(sm) {
+            padding: 0 0 rem(5px);
+        }
+    }
+}
+
+.product-card {
+    &__logo {
+        @include media-breakpoint-down(sm) {
+            width: 30%;
+            height: 100%;
+        }
+    }
+    &__value--wrap {
+        width: 75px;
+    }
+}
+
+.js-comment-modal-logo {
+    width: 6.25rem;
+}
+
+.js-toggle-cc-cards {
+    justify-content: center;
+    span {
+        align-self: center;
+        vertical-align: middle;
+    }
+}
+
+.expandable-product-card__list {
+    h1 {
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.expandable-product-card__content--left {
+    @include media-breakpoint-down(md) {
+        min-height: 68px;
+        max-height: 79px;
+    }
+}
+
+.expandable-product-card__ratings {
+    min-width: 130px;
+}
+
+.fixed-link {
+    height: 100%;
+    a {
+        text-decoration: none;
+    }
+}
+
+.iconScrolldown {
+    transform: rotate(180deg) translateY(2px);
+}

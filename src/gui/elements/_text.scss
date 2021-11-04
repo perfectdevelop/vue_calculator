@@ -1,0 +1,95 @@
+/*
+*  Text Inputs
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+
+.text {
+    display: block;
+    position: relative;
+    height: 40px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    background-color: $white;
+    color: #000;
+    font-weight: 300;
+
+    &--is-currency {
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #9B9B9B;
+            content: "TL";
+            z-index: 1;
+        }
+    }
+
+    &--is-interest {
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #9B9B9B;
+            content: "%";
+            z-index: 1;
+        }
+    }
+
+    &--is-day {
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #9B9B9B;
+            content: "Gün";
+            z-index: 1;
+        }
+    }
+
+    &--is-area {
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #9B9B9B;
+            content: "m2";
+            z-index: 1;
+        }
+    }
+
+    &__element {
+        @include size(100%, 100%);
+        position: relative;
+        padding: 0 30px 0 10px;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        z-index: 2;
+
+        &:focus {
+            border: 0;
+        }
+
+        &::placeholder {
+            color: #6F6F6F;
+            font-size: 16px;
+            opacity: 0.3;
+        }
+        &--dark-placeholder::placeholder {
+            opacity: 0.7;
+        }   
+    }
+
+    &--block {
+        width: 100%;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+}

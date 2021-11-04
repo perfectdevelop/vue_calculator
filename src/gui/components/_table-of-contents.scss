@@ -1,0 +1,63 @@
+/*
+*  Table of Contents
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.table-of-contents {
+    @include media-breakpoint-up(md) {
+        display: inline-block;
+        width: 370px;
+    }
+    margin-bottom: 1%;
+    padding: 15px;
+    border: solid rem(1px) rgba(155, 155, 155, 0.32);
+    background-color: rgba(0, 0, 0, 0.05);
+    color: $color-text;
+
+    &__titleArea {
+        position: relative;
+        margin-bottom: -10px;
+        text-align: center;
+        h2 {
+            display: inline-block;
+            margin: 0;
+        }
+
+    }
+
+    &__toggleArea {
+        font-size: rem(16px);
+        text-align: left;
+        cursor: pointer;
+        vertical-align: text-bottom;
+        .toggleText {
+            font-size: rem(14px);
+        }
+
+        .iconScrollup {
+            transform: rotate(0deg) translateY(0);
+            vertical-align: middle;
+        }
+    }
+
+    &__toggleArea.off {
+        .iconScrollup {
+            transform: rotate(180deg) translateY(2px);
+        }
+    }
+
+    &__elements {
+        margin: 0;
+        padding: 10px 0 0 20px;
+        list-style: decimal;
+        cursor: default;
+        
+        li {
+            font-size: rem(15px);
+        }
+
+        a {
+            color: $color-blue;
+        }
+    }
+}

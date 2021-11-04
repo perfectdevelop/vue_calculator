@@ -1,0 +1,51 @@
+/*
+*  CMS Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.jq-ry-container {
+    display: block;
+    position: relative;
+    padding: 0 5px;
+    line-height: 0;
+    cursor: pointer;
+    box-sizing: content-box;
+    direction: ltr;
+
+    &[readonly="readonly"] {
+        cursor: default;
+    }
+
+    & > .jq-ry-group-wrapper {
+        position: relative;
+        width: 100%;
+
+        & > .jq-ry-group {
+            position: relative;
+            line-height: 0;
+            white-space: nowrap;
+            z-index: 10;
+
+            & > svg {
+                display: inline-block;
+            }
+
+            &.jq-ry-normal-group {
+                width: 100%;
+            }
+
+            &.jq-ry-rated-group {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                overflow: hidden;
+                z-index: 11;
+            }
+        }
+    }
+}
+
+.fb-article-rating > p {
+    font-weight: bold;
+}

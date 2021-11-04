@@ -1,0 +1,19 @@
+/*
+*  Scrollup Button
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.scrollup {
+    @include media-breakpoint-down(md) {
+        bottom: 20%;
+    }
+    display: none;
+    position: fixed;
+    right: 4%;
+    bottom: 5%;
+    height: 50px;
+    color: $secondary;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 100;
+}

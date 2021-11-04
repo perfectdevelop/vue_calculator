@@ -1,0 +1,44 @@
+/*
+*  Credit Score Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+
+.main-nav-toggler--mobile {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .2);
+}
+
+.feature-box {
+    &__title {
+        @include media-breakpoint-down(sm) {
+            margin-top: 0;
+        }
+    }
+
+    &--redirect {
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            align-items: center;
+            height: 75px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        justify-content: center;
+        height: 90px;
+        margin: 0;
+
+        .feature-box__title {
+            @include media-breakpoint-down(sm) {
+                font-size: rem(14px);
+            }
+
+            font-size: rem(19px);
+            font-weight: 600;
+        }
+    }
+
+    &__icon {
+        color: $color-black;
+    }
+}

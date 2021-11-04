@@ -1,0 +1,55 @@
+/*
+*  Video Box
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Hakan Sarier <hakan@hesapkurdu.com>
+*/
+
+@mixin position-shared {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.video-box {
+    &__title {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(16px);
+            font-weight: 400;
+        }
+        @include hk-icon-(play, before);
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        color: $color-text;
+        font-size: rem(14px);
+        font-weight: 600;
+        &:before {
+            display: block;
+            margin-right: .75rem;
+            float: left;
+            color: $color-dark-gray;
+            font-size: 2rem;
+        }
+    }
+    &__poster {
+        @include size(100%);
+        filter: brightness(75%);
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__iframe {
+        @include size(100%);
+        min-height: 220px;
+        border: 1px black solid;
+    }
+    &__button {
+        @include position-shared;
+        @include size(100%);
+        background: transparent;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

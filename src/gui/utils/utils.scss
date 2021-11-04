@@ -1,0 +1,71 @@
+/*
+*  Utils
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+@import "text-colors";
+@import "font-size";
+
+.overflow--hidden {
+    overflow: hidden !important;
+}
+
+.overflow-y--auto {
+    overflow: auto;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.pointer--none {
+    pointer-events: none;
+}
+
+.outline--none {
+    outline: none !important;
+}
+
+.cursor--pointer {
+    cursor: pointer !important;
+}
+
+.cursor--not-allowed {
+    cursor: not-allowed !important;
+}
+
+.u-to-uppercase {
+    text-transform: uppercase;
+}
+
+.wrap-in-xs {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    display: block;
+}
+
+.mobile-margin-rule  {
+    @include media-breakpoint-down(md) {
+        margin-top: 2rem;
+    }
+}
+
+.mobile-last-item {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 0 !important;
+    }
+}
+
+.page-body {
+    // for ios safari
+    -webkit-overflow-scrolling: touch;
+}
+
+.list-style-decimal {
+    list-style: decimal !important;
+}

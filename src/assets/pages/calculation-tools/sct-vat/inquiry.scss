@@ -1,0 +1,87 @@
+/*
+*  CC Delay Interest Calculate Styles
+*  Hesapkurdu Arge
+*/
+
+/*
+* Base Libraries & Settings
+* Includes bootstrap, color, size settings & mixins
+*/
+@import "../../../../base";
+
+/*
+* Externals
+* Includes  style of externals libraries, plugins
+*/
+@import "../../../../gui/externals/externals";
+@import "node_modules/bootstrap/scss/utilities/spacing";
+@import "node_modules/bootstrap/scss/utilities/borders";
+@import "node_modules/bootstrap/scss/utilities/float";
+@import "node_modules/bootstrap/scss/utilities/sizing";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/utilities/text";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/close";
+@import "node_modules/bootstrap/scss/tables";
+@import "node_modules/bootstrap/scss/modal";
+@import "node_modules/bootstrap/scss/tooltip";
+@import "node_modules/swiper/swiper.scss";
+
+/*
+* Elements
+* Includes style of html tags like button, radio, chechkbox etc.
+ */
+@import "../../../../gui/elements/elements";
+
+/*
+* Particules
+* The smallest parts of theme
+* Particules form components
+*/
+@import "../../../../gui/utils/utils";
+@import "../../../../gui/particules/particules";
+
+/*
+* Components
+* Small parts
+* Components form layouts
+*/
+@import "../../../../gui/components/main-navigation/main-nav";
+@import "../../../../gui/components/banner";
+@import "../../../../gui/utils/banner-rules";
+@import "../../../../gui/components/form";
+@import "../../../../gui/components/data-table";
+@import "../../../../gui/components/list-group";
+@import "../../../../gui/components/sticky-header";
+@import "../../../../gui/components/product-card";
+@import "../../../../gui/components/widget";
+@import "../../../../gui/components/price-box";
+@import "../../../../gui/components/info-box";
+@import "../../../../gui/components/application-detail-list";
+@import "../../../../gui/components/footer-list";
+@import "../../../../gui/components/footer-social-list";
+@import "../../../../gui/components/dfp";
+@import "../../../../gui/components/tab-button";
+@import "../../../../gui/components/modal-fullscreen";
+@import "../../../../gui/components/references";
+@import "../../../../gui/components/navtab";
+@import "../../../../gui/components/table-sticky-header";
+
+/*
+* Elements
+* Typography, elements, text etc...
+* Components form layouts
+*/
+@import "../../../../gui/elements/elements";
+
+/*
+* Layouts
+* Includes styles of component's size, position etc.
+*/
+@import "../../../../gui/layouts/header";
+@import "../../../../gui/layouts/section";
+@import "../../../../gui/layouts/cms/content";
+@import "../../../../gui/layouts/cms/calculation/index";
+@import "../../../../gui/layouts/cms/calculation/cc-delay-interest/inquiry";
+@import "../../../../gui/layouts/footer";

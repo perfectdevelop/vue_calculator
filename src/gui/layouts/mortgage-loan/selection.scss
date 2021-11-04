@@ -1,0 +1,190 @@
+/*
+*  Mortgage Loan Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+
+body {
+    background-color: $gray-100;
+}
+
+.rating-container {
+    padding: 0;
+}
+
+.section--content {
+    @include media-breakpoint-up(md) {
+        margin-top: 60px;
+    }
+}
+
+.data-table__item {
+    @include media-breakpoint-down(sm) {
+        min-width: rem(70px);
+        font-size: rem(14px);
+    }
+
+    &:first-child {
+        min-width: 20px;
+        font-weight: 700;
+    }
+
+    padding: rem(20px) 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.product-card {
+    &:first-child {
+        @include media-breakpoint-up(sm) {
+            margin-top: 0;
+        }
+    }
+}
+
+.modal-fullscreen {
+    &-header__text::before {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 3px;
+        background: no-repeat;
+        background-image: url($path + "/images/question.svg");
+        background-size: contain;
+        content: " ";
+        filter: none;
+    }
+}
+
+.contiuneRow {
+    @include media-breakpoint-up(md) {
+        position: relative;
+        top: -20px;
+        right: 10px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        top: -60px;
+    }
+}
+
+.rating-score-text {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: 0;
+    }
+    margin-left: 3px;
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rateyo-stars {
+    margin-top: 2px;
+}
+
+.cursor--pointer {
+    padding-left: 5px;
+}
+
+.cursor--pointer[data-toggle="tooltip"]::before {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: no-repeat;
+    background-image: url($path + "/images/question.svg");
+    background-size: contain;
+    content: " ";
+    filter: none;
+}
+
+.tooltip-inner-div {
+    text-align: left;
+}
+
+.ratings {
+    margin-right: 0;
+    padding-top: 10px;
+}
+
+.online-application-desktop {
+    float: right;
+}
+
+.ratings-mobile {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        font-size: 0.8rem;
+    }
+    font-size: 0.9rem;
+}
+
+.ratings-row {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: -8px;
+    }
+    @media (max-width: 360px) {
+        padding-right: 0;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-right: 3%;
+    }
+    justify-content: space-between;
+    margin-left: 0;
+    padding-right: 5%;
+}
+
+.comment-modal-body {
+    @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.comment-modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.js-modal-rating-container {
+    margin-top: 2px;
+}
+
+.customer-score-title {
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
+}
+
+.js-total-score {
+    color: #007AFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.rating-p {
+    @include media-breakpoint-between(sm, md) { 
+        font-size: 0.825rem;
+    }
+}
+
+.modal-rateyo-overall {
+    padding-left: 0;
+}
+
+.modal-fullscreen-header .container {
+    @include media-breakpoint-down(sm) {
+        padding-left: 0;
+    }
+}
+
+.overall-tooltip {
+    position: relative;
+    top: 2px;
+}

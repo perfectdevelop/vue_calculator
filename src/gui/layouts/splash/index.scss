@@ -1,0 +1,27 @@
+/*
+*  Splash Screen styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.crossell-modal-close-button {
+    color: $color-black;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-black;
+        text-decoration: none;
+    }
+}
+
+.content-centered {
+    text-align: center;
+}
+
+.modal-custom {
+    pointer-events: none;
+}
+
+.modal-dialog {
+    pointer-events: all;
+}

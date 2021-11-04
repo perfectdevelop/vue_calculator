@@ -1,0 +1,172 @@
+/*
+*  Insurer Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.section {
+    &--testimonial {
+        padding-top: 0;
+    }
+
+    &--redirect {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile.jpg");
+            background-size: 100% 100%;
+        }
+        background-image: url($path + "/images/banner/bg-dask.jpg");
+        background-position: 0 120%;
+    }
+
+    &__content {
+        @include media-breakpoint-down(sm) {
+            background-color: transparent;
+        }
+        color: white;
+        text-align: center;
+    }
+
+    &__title {
+        @include media-breakpoint-down(sm) {
+            color: white;
+            text-align: center;
+        }
+    }
+}
+
+.brands__image {
+    height: auto;
+}
+
+.feature-box {
+    &__title {
+        @include media-breakpoint-down(sm) {
+            margin-top: 0;
+        }
+    }
+
+    &__icon {
+        color: $color-black;
+    }
+}
+
+.info-box {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+        @include media-breakpoint-down(sm) {
+            margin: 0 1rem 0 0;
+        }
+    }
+}
+
+.hk-icon--is-banner {
+    color: $color-text-darker;
+}
+
+
+.hkJumbotron__logo {
+    @include media-breakpoint-down(sm) {
+        width: auto;
+        height: 60px;
+        padding: 5px;
+    }
+
+    width: auto;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: white;
+}
+
+.article div,
+.article p {
+    color: #696969;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.article h1 {
+    margin: 2rem 0 1rem;
+    color: #737373;
+    font-size: 1.3125rem;
+    font-weight: 800;
+    line-height: 1.875rem;
+}
+
+.article h2 {
+    font-size: 1.1875rem;
+    line-height: 1.6875rem;
+}
+
+.article h2,
+.article h3 {
+    margin: 2rem 0 1rem;
+    color: #737373;
+    font-weight: 700;
+}
+
+.article h3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.article h4 {
+    margin: 2rem 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.article h4,
+.article span {
+    color: #737373;
+}
+
+.article hr {
+    margin: 1rem auto;
+    border: 0;
+    border-top: .0625rem solid #E4E3E3;
+}
+
+.article p {
+    margin: 1rem 0;
+}
+
+.article div img:not(.product-card__logo) {
+    max-width: 100%;
+    margin: 0 0 1rem;
+}
+
+.article .button-apply {
+    display: block;
+    min-height: 40px;
+    margin: 0 0 1rem;
+    padding: 10px;
+    -webkit-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
+    border-radius: .3rem;
+    border-color: #5790E6;
+    background-color: #5790E6;
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.article .button-apply:hover {
+    border-color: #2B73DF;
+    background-color: #367AE1;
+    color: #FFFFFF;
+    text-decoration: none;
+}

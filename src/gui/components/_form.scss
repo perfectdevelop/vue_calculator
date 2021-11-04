@@ -1,0 +1,67 @@
+/*
+*  Form
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Banu
+*/
+
+.funnel-form {
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+    }
+    position: relative;
+    padding: 1px 30px;
+    border-radius: 8px;
+    background-color: $color-white;
+    text-align: center;
+
+    &--shadow {
+        @include media-breakpoint-down(sm) {
+            box-shadow: none;
+        }
+        box-shadow: 0 0.1875rem 0.5rem 0 rgba(0, 0, 0, .2);
+    }
+
+    &__label {
+        margin-bottom: .3rem;
+        color: $color-text-darker;
+        font-family: $font-family-base;
+        font-size: 12px;
+    }
+
+    &__label--white {
+        margin-bottom: .3rem;
+        color: $color-white;
+        font-family: $font-family-base;
+        font-size: 12px;
+    }
+
+    &__elements {
+        @include media-breakpoint-down(sm) {
+            margin: 8px 0;
+        }
+        display: block;
+        position: relative;
+        margin: 25px 0;
+        text-align: left;
+    }
+
+    &__error:not(select):not(input),
+    &__error-manuel {
+        display: block;
+        margin: 0;
+        color: $primary;
+        font-size: rem(12px);
+        font-weight: 600;
+    }
+
+    .form__elements--error {
+        .funnel-form__label {
+            color: $primary;
+        }
+    }
+}
+
+.form--payment-mail {
+    border: rem(1px) solid $gray-300;
+    border-radius: rem(5px);
+}

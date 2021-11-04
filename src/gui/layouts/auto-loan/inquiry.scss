@@ -1,0 +1,216 @@
+/*
+*  Auto Loan Inqiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.section {
+    &--testimonial,
+    &--statics {
+        @include media-breakpoint-down(sm) {
+            .container,
+            .col-md-12 {
+                padding-right: 0;
+                padding-left: 0;
+            }
+
+            .row {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &--testimonial {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &--redirect {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }    
+}
+
+.banner {
+    background-color: $color-white;
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile-1px.jpg");
+            background-size: 100% 100%;
+        }
+        @include media-breakpoint-up(sm) {
+            background: no-repeat;
+            background-image: url($path + "/images/banner/svg/auto-loan.svg");
+            background-position: 80% top;
+            background-size: contain;
+        }
+        filter: none;
+    }
+    &__title {
+        color: $color-gray;
+    }
+
+    &__description {
+        color: $color-gray;
+        text-shadow: 2px 1px 0 #FFFFFF;
+    }
+}
+
+.funnel-form {
+    @include media-breakpoint-up(md) {
+        width: 535px;
+        margin: 0 auto; 
+    }
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+.list-group {
+    @include media-breakpoint-up(md) {
+        height: 100%;
+    }
+}
+
+.data-table--auto-list {
+    .data-table__item {
+        padding: 8px 10px;
+    }
+}
+
+.badge--result {
+    @include media-breakpoint-up(md) {
+        font-size: rem(16px);
+    }
+    font-size: rem(14px);
+}
+
+.widget__content {
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+    width: 60%;
+    margin: 0 auto;
+}
+
+.select {
+    width: 100%;
+}
+
+.rating-score-text {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: 0;
+    }
+    margin-left: 3px;
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rateyo-stars {
+    margin-top: 2px;
+}
+
+.cursor--pointer {
+    padding-left: 5px;
+}
+
+.cursor--pointer[data-toggle="tooltip"]::before {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: no-repeat;
+    background-image: url($path + "/images/question.svg");
+    background-size: contain;
+    content: " ";
+    filter: none;
+}
+
+.tooltip-inner-div {
+    text-align: left;
+}
+
+.ratings {
+    margin-right: 0;
+    padding-top: 10px;
+}
+
+.online-application-desktop {
+    float: right;
+}
+
+.ratings-mobile {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        font-size: 0.8rem;
+    }
+    font-size: 0.9rem;
+}
+
+.ratings-row {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: -8px;
+    }
+    @media (max-width: 360px) {
+        padding-right: 0;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-right: 3%;
+    }
+    justify-content: space-between;
+    margin-left: 0;
+    padding-right: 5%;
+}
+
+.comment-modal-body {
+    @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.comment-modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.js-modal-rating-container {
+    margin-top: 2px;
+}
+
+.customer-score-title {
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
+}
+
+.js-total-score {
+    color: #007AFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.rating-p {
+    @include media-breakpoint-between(sm, md) { 
+        font-size: 0.825rem;
+    }
+}
+
+.modal-rateyo-overall {
+    padding-left: 0;
+}
+
+.modal-fullscreen-header .container {
+    @include media-breakpoint-down(sm) {
+        padding-left: 0;
+    }
+}
+
+.overall-tooltip {
+    position: relative;
+    top: 1px;
+}

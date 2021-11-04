@@ -1,0 +1,21 @@
+/*
+*  Expand Collapse Button
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.expand-collapse-button {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    color: inherit;
+    font-size: rem(12px);
+    font-weight: 600;
+    text-decoration: underline;
+    &:hover {
+        color: $primary;
+    }
+    &:focus {
+        outline: none;
+    }
+}

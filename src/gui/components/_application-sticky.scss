@@ -1,0 +1,15 @@
+/*
+*  Application Widget Sticky
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+
+.sticky-header--is-open {
+    padding: rem(22px) 0 rem(16px);
+    .btn-transparent {
+        @include media-breakpoint-down(sm) {
+            padding: rem(12px) 0;
+            font-size: rem(13px);
+        }
+    }
+}

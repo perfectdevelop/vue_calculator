@@ -1,0 +1,56 @@
+/*
+*  Feedback Comment Index
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.feedback-comment-container {
+    @include media-breakpoint-down(md) {
+        padding: 20px;
+    }
+    padding: 20px 50px;
+    background-color: #FFFFFF;
+    color: $color-text;
+    -webkit-box-shadow: 0 15px 22px 0 rgba(0, 0, 0, .08);
+    box-shadow: 0 15px 22px 0 rgba(0, 0, 0, .08);
+}
+
+
+.calculation-results {
+    @include media-breakpoint-up(sm) {
+        width: 533px;
+        padding: 30px;
+    }
+
+    margin: 0 auto;
+    padding: 0;
+    background: #FFFFFF;
+    color: #737373;
+    text-align: left;
+
+    &__hklogo {
+        width: 40%;
+        margin: 0;
+    }
+
+    &__alert {
+        margin-bottom: 1rem;
+        padding: .75rem 1.25rem;
+        border: 1px solid #F5C6CB;
+        border-radius: .25rem;
+        background: #F8D7DA;
+        color: #721C24;
+    }
+
+    &__success {
+        margin-bottom: 1rem;
+        padding: .75rem 1.25rem;
+        border: 1px solid #59B564;
+        border-radius: .25rem;
+        background: #BEE2C2;
+        color: #2D5331;
+    }
+
+    .application-detail-list__elements {
+        color: #737373;
+    }
+}

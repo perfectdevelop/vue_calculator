@@ -1,0 +1,16 @@
+/*
+*  Banner Standart Rule
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.banner {
+    &::before {
+        @include media-breakpoint-down(sm) {
+            background-attachment: scroll;
+            background-image: url($path + "/images/banner/funnel-mobile.jpg");
+            background-size: cover;
+        }
+        background-position: 0 30%;
+        // background-size: cover;
+    }
+}

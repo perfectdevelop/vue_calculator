@@ -1,0 +1,269 @@
+/*
+*  Calculations Index
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.section {
+    &--testimonial {
+        padding-top: 0;
+    }
+
+    &--redirect {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.banner {
+    &--calculation {
+        @include media-breakpoint-up(md) {
+            .banner__content {
+                background: none;
+                box-shadow: none;
+            }
+            .banner__title {
+                color: $color-white;
+            }
+        }
+
+        .funnel-form {
+            @include media-breakpoint-up(sm) {
+                width: 533px;
+                padding: 30px;
+            }
+            margin: 0 auto;
+            padding: 0;
+            text-align: left;
+        }
+
+        .funnel-form__preparing {
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+            display: table;
+        }
+
+        .funnel-form__elements {
+            margin: 0;
+
+            .select::after {
+                display: inline-block;
+                transform: rotate(0deg);
+                transition: transform 300ms ease;
+            }
+
+            .select:focus-within::after {
+                transform: rotate(180deg);
+            }
+
+            &--preparing {
+                display: table-cell;
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    &::before {
+        @include media-breakpoint-down(md) {
+            background-image: url($path + "/images/banner/funnel-mobile.jpg");
+            background-position: center;
+        }
+        background-image: url($path + "/images/banner/bg-mtv-hesaplama.jpg");
+        background-position: 0 100%;
+        opacity: 1;
+        -webkit-filter: brightness(60%);
+        filter: brightness(60%);
+    }
+}
+
+.calculation-results {
+    @include media-breakpoint-up(sm) {
+        width: 533px;
+        padding: 30px;
+    }
+
+    margin: 0 auto;
+    padding: 0;
+    background: #ffffff;
+    color: #737373;
+    text-align: left;
+
+    &__hklogo {
+        width: 40%;
+        margin: 0;
+    }
+
+    &__alert {
+        margin-bottom: 1rem;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid #f5c6cb;
+        border-radius: 0.25rem;
+        background: #f8d7da;
+        color: #721c24;
+    }
+
+    &__success {
+        margin-bottom: 1rem;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid #59b564;
+        border-radius: 0.25rem;
+        background: #bee2c2;
+        color: #2d5331;
+    }
+
+    .application-detail-list__elements {
+        align-items: center;
+        color: #737373;
+        strong {
+            font-size: 1rem;
+            font-weight: 900;
+        }
+    }
+}
+
+.brands__image {
+    height: auto;
+}
+
+.feature-box {
+    &__title {
+        @include media-breakpoint-down(sm) {
+            margin-top: 0;
+        }
+    }
+
+    &__icon {
+        color: $color-black;
+    }
+}
+
+.info-box {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+        @include media-breakpoint-down(sm) {
+            margin: 0 1rem 0 0;
+        }
+    }
+}
+
+.comment-section {
+    div {
+        width: 100%;
+    }
+}
+
+.hk-icon--is-banner {
+    color: $color-text-darker;
+}
+
+.report-comment {
+    cursor: pointer;
+}
+
+.select__element {
+    @include media-breakpoint-down(md) {
+        width: 88%;
+    }
+}
+
+.table-responsive-sm {
+    @include media-breakpoint-down(md) {
+        .table {
+            width: max-content;
+            min-width: 100%;
+            max-width: max-content;
+
+            td,
+            th {
+                min-width: 60px;
+                max-width: 160px;
+            }
+        }
+    }
+}
+
+.text__line--normalize {
+    line-height: 1.5;
+}
+
+.author {
+    color: $gray-600;
+
+    &__section-title {
+        font-size: rem(18px);
+        font-weight: bold;
+    }
+    &__image {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #eaeaea;
+        border-radius: 7px;
+        background: #999999;
+    }
+    &__name {
+        margin: 0;
+        font-weight: bold;
+    }
+    a {
+        color: $color-blue;
+        &:hover {
+            color: $color-dark-gray;
+        }
+    }
+}
+
+.days-group select {
+    width: 100%;
+    height: 37px;
+}
+.yes-no select {
+    width: 100%;
+    height: 37px;
+}
+.line {
+    margin-bottom: 10px;
+    text-align: center;
+    .input-table-child {
+        margin-left: 10px;
+        text-align: end;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.result {
+    width: 532px;
+    padding: 30px;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.warning {
+    color: red;
+}
+.btn-calculate{
+    width: 90%;
+    margin-top: 20px;
+}
+.lines{
+    display: flex;
+}
+.parent-calculate{
+    text-align: center;
+}
+.main-header{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+.answer{
+    font-weight: 700;
+}

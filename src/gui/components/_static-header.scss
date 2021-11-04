@@ -1,0 +1,98 @@
+.static-form-header {
+    .product-detail {
+        padding: 0.5rem 0;
+    }
+
+    .btn-transparent {
+        padding: .75rem 0;
+        font-size: rem(13px);
+    }
+
+    a.securityInformation_link::before {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        content: "";
+    }
+}
+.application-form {
+    @include  media-breakpoint-down(xs) {
+        a.securityInformation_link {
+            padding: rem(6px);
+            padding-left: 0;
+        }
+    }
+}
+
+.product-detail {
+    .form-box__h1 {
+        margin: 0;
+    }
+}
+
+a.securityInformation_link {
+    color: #3E77CD;
+    font-size: rem(14px);
+    text-decoration: underline;
+}
+
+.reward-badge {
+    color: #737373;
+    font-size: rem(14px);
+    font-weight: 400;
+    
+    &::before {
+        display: inline-block;
+        width: rem(30px);
+        height: rem(30px);
+        margin: 5px 5px 5px 0;
+        background-image: url($path + "/images/reward.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+    }
+}
+
+.securityDetails {
+    color: #4A4A4A;
+    font-family: "Open Sans", sans-serif;
+    font-size: rem(14px);
+    > div {
+        display: flex;
+        margin-bottom: 1rem;
+        padding: rem(8px) rem(5px);
+        color: #737373;
+    }
+    img {
+        width: rem(50px);
+        height: rem(50px);
+        margin: 0;
+    }
+    .hk-icon--ok {
+        font-size: 1.5rem;
+    }
+    .col-2 {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .reward-badge {
+        padding-top: rem(10px);
+    }
+    h4 {
+        color: #737373;
+        font-size: rem(14px);
+        font-weight: 700;
+        vertical-align: middle;
+    }
+}
+
+.form-box__elements {
+    > h4.form-box__h4 {
+        color: #737373;
+        font-size: rem(14px);
+        font-weight: 700;
+        vertical-align: middle;
+    }    
+}

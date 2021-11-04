@@ -1,0 +1,84 @@
+/*
+*  Buttons
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydın Çınar <aydin@hesapkurdu.com>
+*/
+
+.btn {
+    &--icon {
+        padding: 10px;
+    }
+
+    &--middle {
+        padding: rem(12px) rem(13px);
+        font-size: rem(14px);
+    }
+
+    &--small {
+        padding: 10px 13px;
+        font-size: 10px;
+    }
+
+
+    &--input-height {
+        padding: rem(11px);
+    }
+
+    &-transparent {
+        // padding: 10px 34px;
+        border-radius: 4px;
+        border-color: #CCCCCC;
+        background-color: #FFFFFF;
+        color: #B9B9B9;
+        // font-size: 16px;
+        font-weight: 600;
+
+        &--small {
+            padding: 10px 13px;
+            font-size: 10px;
+        }
+
+        &--middle {
+            padding: rem(12px) rem(13px);
+            font-size: rem(14px);
+        }
+
+        &--tiny {
+            font-weight: 400;
+        }
+
+        &:hover {
+            background-color: #EBEBEB;
+            color: #B9B9B9;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:active {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    &-white {
+        &:focus {
+            background-color: #FFF;
+        }
+    }
+
+    &--popover {
+        padding: 0;
+        border: 0;
+        font-size: rem(20px);
+
+        &:hover,
+        &:focus {
+            background: transparent;
+            color: $gray-500;
+        }
+    }
+}

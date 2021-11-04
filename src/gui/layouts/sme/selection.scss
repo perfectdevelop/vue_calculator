@@ -1,0 +1,56 @@
+/*
+*  SME Inqiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+
+body {
+    background-color: $gray-100;
+}
+
+.rating-container {
+    padding: 0;
+}
+
+.section--content {
+    @include media-breakpoint-up(md) {
+        margin-top: 60px;
+    }
+    min-height: 50vh;
+}
+
+.data-table__item {
+    @include media-breakpoint-down(sm) {
+        min-width: rem(70px);
+        font-size: rem(14px);
+    }
+    &:first-child {
+        min-width: 0;
+        font-weight: 700;
+    }
+    padding: rem(20px) 0;
+}
+
+.price-box {
+    &-ruler {
+        @include media-breakpoint-down(sm) {
+            padding: 0 rem(15px);
+        }
+    }
+}
+
+.life-insurer-company-logo {
+    height: 40px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.product-card {
+    &:first-child {
+        @include media-breakpoint-up(sm) {
+            margin-top: 0;
+        }
+    }
+}

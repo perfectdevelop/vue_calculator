@@ -1,0 +1,23 @@
+/*
+*  Footer List CSS Rules
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.footer-list {
+    padding-left: 0;
+
+    &--gap-from-top {
+        margin-top: 50px;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__link {
+        &:hover {
+            color: #A5A5A5;
+        }
+    }
+}

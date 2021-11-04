@@ -1,0 +1,95 @@
+/*
+*  About Page Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.management-section {
+    img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    p {
+        margin-top: 5px;
+    }
+}
+
+.article h1 {
+    margin: 2rem 0 1rem;
+    color: #737373;
+    font-size: 1.3125rem;
+    font-weight: 800;
+    line-height: 1.875rem;
+}
+
+.article h2 {
+    font-size: 1.1875rem;
+    line-height: 1.6875rem;
+}
+
+.article h2,
+.article h3 {
+    margin: 2rem 0 1rem;
+    color: #737373;
+    font-weight: 700;
+}
+
+.article h3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+.article h4 {
+    margin: 2rem 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.article h4,
+.article span {
+    color: #737373;
+}
+
+.article hr {
+    margin: 1rem auto;
+    border: 0;
+    border-top: .0625rem solid #E4E3E3;
+}
+
+.article p {
+    margin: 1rem 0;
+}
+
+.article div img:not(.product-card__logo) {
+    max-width: 100%;
+    margin: 0 0 1rem;
+}
+
+.article .button-apply {
+    display: block;
+    min-height: 40px;
+    margin: 0 0 1rem;
+    padding: 10px;
+    -webkit-transition: background-color .15s ease-in-out;
+    transition: background-color .15s ease-in-out;
+    border-radius: .3rem;
+    border-color: #5790E6;
+    background-color: #5790E6;
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.article .button-apply:hover {
+    border-color: #2B73DF;
+    background-color: #367AE1;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.section--faq {
+    h2 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+}

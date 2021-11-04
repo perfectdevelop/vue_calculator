@@ -1,0 +1,52 @@
+/*
+*  Sticky Header
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.sticky-header {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: $gray-100;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 99;
+
+    &--is-open {
+        height: auto;
+        padding: 40px 0 20px;
+        transition: all 100ms;
+    }
+
+    &__close {
+        display: flex;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        align-items: center;
+    }
+
+    &-show {
+        @include media-breakpoint-up(sm) {
+            display: none;
+        }
+        position: fixed;
+        top: 20px;
+        width: 100%;
+        z-index: 99;
+
+        .btn {
+            box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.sticky-header-hide {
+    display: none;
+}

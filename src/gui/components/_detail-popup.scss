@@ -1,0 +1,17 @@
+/*
+*  Detail Popup
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Banu
+*/
+
+.modal-header {
+    &--borderless {
+        border: none;
+    }
+    &--border {
+        border: solid 1px rgba(155, 155, 155, 0.32);   
+    }
+    &--shadow {
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+}

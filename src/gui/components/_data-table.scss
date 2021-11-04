@@ -1,0 +1,107 @@
+/*
+*  Table
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.data-table {
+    // background: $white;
+
+    &--block {
+        width: 100%;
+    }
+
+    &--fixed {
+        table-layout: fixed;
+    }
+
+    &__row {
+        border-bottom: 1px solid rgba($gray-300, .2);
+        border-collapse: collapse;
+
+        &:last-child {
+            border-bottom: 0;
+
+            .data-table__item {
+                padding-bottom: 0;
+            }
+        }
+
+        &--head {
+            border: 0;
+        }
+    }
+
+    &__item {
+        @include media-breakpoint-down(sm) {
+            font-size: rem(14px);
+        }
+
+        padding: 15px 10px;
+        color: $gray-500;
+        font-size: rem(16px);
+        font-weight: 300;
+        letter-spacing: -0.2px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &--head-copy {
+            padding: 20px 10px;
+            color: $gray-300;
+            font-size: rem(16px);
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            vertical-align: bottom;
+        }
+
+        &--head-copy-small {
+            font-size: rem(12px);
+        }
+
+    }
+
+    &__nlist {
+        list-style-type: none;
+    }
+
+    // Modifier: more-column
+    &--more-column {
+
+        @include media-breakpoint-down(sm) {
+
+            .data-table__item {
+                padding-right: 0;
+                padding-left: 0;
+                text-align: center;
+
+                &:first-child {
+                    width: 85px;
+                    text-align: left;
+
+                    img {
+                        width: 70px;
+                    }
+                }
+
+                .btn--icon {
+                    padding: 5px;
+                    transform: rotate(180deg);
+                }
+
+                .badge {
+                    &--campaign {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &--image {
+                        padding-top: 23px;
+                    }
+                }
+            }
+        }
+    }
+}

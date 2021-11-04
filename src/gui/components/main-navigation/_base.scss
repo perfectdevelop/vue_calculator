@@ -1,0 +1,29 @@
+/*
+*  Main Nav Base CSS Rules
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Aydin Cinar <aydin@hesapkurdu.com>
+*/
+
+.main-nav {
+    // padding: 20px 0;
+    transition: all .3s ease-in-out;
+    background-color: $color-white;
+
+    &__item,
+    &__sub-nav__item {
+        list-style: none;
+    }
+
+    &__link,
+    &__sub-nav__link {
+        color: $color-text;
+        font-family: $font-family-base;
+        text-decoration: none;
+
+        &:focus,
+        &:active,
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

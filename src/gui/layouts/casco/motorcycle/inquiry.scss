@@ -1,0 +1,109 @@
+/*
+*  Insurance Casco-Motorcycle Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.section {
+    &--testimonial {
+        padding-top: 0;
+    }
+
+    &--redirect {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.list-group {
+    @include media-breakpoint-up(md) {
+        height: 100%;
+    }
+}
+
+.form__elements {
+    margin-top: 5px;
+}
+
+.loading {
+    border-radius: 8px;
+    opacity: .75;
+}
+
+.banner::before {
+    @include media-breakpoint-down(md) {
+        background-position: center;
+    }
+    background-image: url($path + "/images/banner/kasko-sigortasi.jpg");
+    background-position: 0 150%;
+}
+
+.banner-swiper {
+    border: 0;
+}
+
+.brands__image {
+    height: auto;
+}
+
+
+.data-table__item {
+    @include media-breakpoint-down(sm) {
+        font-size: 13px;
+    }
+    img {
+        @include media-breakpoint-down(sm) {
+            width: 40px;
+        }
+    }
+}
+
+.feature-box {
+    &__title {
+        @include media-breakpoint-down(sm) {
+            margin-top: 0;
+        }
+    }
+
+    &--redirect {
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            align-items: center;
+            height: 75px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        justify-content: center;
+        height: 90px;
+        margin: 0;
+
+        .feature-box__title {
+            @include media-breakpoint-down(sm) {
+                font-size: rem(14px);
+            }
+
+            font-size: rem(19px);
+            font-weight: 600;
+        }
+    }
+
+    &__icon {
+        color: $color-black;
+    }
+}
+
+.info-box {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+        @include media-breakpoint-down(sm) {
+            margin: 0 1rem 0 0;
+        }
+    }
+}
+
+.hk-icon--is-banner {
+    color: $color-text-darker;
+}

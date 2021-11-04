@@ -1,0 +1,11 @@
+/*
+*  Table
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.table {
+    @include media-breakpoint-up(sm) {
+        font-size: rem(16px);
+    }
+    font-size: rem(12px);
+}

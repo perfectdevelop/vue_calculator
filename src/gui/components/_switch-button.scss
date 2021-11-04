@@ -1,0 +1,49 @@
+/*
+*  Switch Button
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Hakan Sarier <hakan@hesapkurdu.com>
+*/
+
+.switch {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #7373734F;
+    border-radius: 40px;
+    background: #FFF;
+    -webkit-box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.35);
+    box-shadow: inset 0 0 3px 1px rgb(206, 213, 224);
+    cursor: pointer;
+    
+    &-option {
+        @include media-breakpoint-up(sm) {
+            font-size: 1.25rem;
+        }
+        width: 100%;
+        color: #A8B1BB;
+        font-size: 1rem;
+        text-align: center;
+        cursor: pointer;
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    &-button {
+        position: absolute;
+        left: rem(10px);
+        width: calc(50% - 20px);
+        height: rem(40px);
+        border-radius: rem(40px);
+        background: $secondary;
+        box-shadow: 0 0 2px 2px rgba(87, 144, 230, 0.42);
+    }
+    
+    &-active {
+        color: $color-white;
+    }
+}

@@ -1,0 +1,28 @@
+/*
+*  Youtube Modal
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.youtube-modal {
+    border: none;
+    background-color: transparent;
+
+    .modal__btn--close {
+        @include hk-icon-(times);
+        position: absolute;
+        top: -.6rem;
+        right: -.55rem;
+        text-decoration: none;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .modal__btn--close::before {
+        padding: 5px;
+        border-radius: 50%;
+        background-color: $color-black;
+        color: #F0EDEB;
+        font-size: .75rem;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .35);
+    }
+}

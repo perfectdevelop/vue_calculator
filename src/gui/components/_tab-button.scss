@@ -1,0 +1,67 @@
+/*
+*  Tab Button
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.tab-button {
+    @include media-breakpoint-down(sm) {
+        height: rem(120px);
+    }
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: rem(108px);
+    margin: 0 0 1.5rem;
+    padding: 0 .3rem;
+    transition: height .2s; 
+    border: none;
+    background-color: $color-white;
+    color: $color-text;
+    box-shadow: 0 rem(3px) rem(8px) 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+
+    &:focus, &--active {
+        height: 90%;
+        transition: height .2s; 
+        border-bottom: rem(3px) solid $primary;
+        outline: none;
+        box-shadow: 0 rem(8px) rem(10px) 0 rgba(0, 0, 0, 0.35);
+    }
+    &:hover {
+        transition: height .2s ease-in-out;
+        text-decoration: none;
+        box-shadow: 0 rem(8px) rem(10px) 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &__icon {
+        display: inline-flex;
+        margin: 0;
+        color: $primary;
+    }
+
+    &__title {
+        @include media-breakpoint-up(sm) {
+            font-size: rem(16px);
+            text-align: center;
+        }
+        margin: 0;
+        padding: 0 rem(10px);
+        font-size: rem(14px);
+        line-height: 1.25;
+        &--small {
+            @include media-breakpoint-down(sm) {
+                font-size: rem(12px);
+            }
+        }
+    }
+
+    &--small {
+        @include media-breakpoint-down(sm) {
+            height: rem(38px);
+            padding: 11px 2px;
+        }
+        height: rem(40px);
+        margin: 0;
+        padding: 10px;
+    }
+}

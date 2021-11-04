@@ -1,0 +1,330 @@
+/*
+*  Personal Loan Inquiry Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+body {
+    background-color: $gray-100;
+}
+
+.order {
+    @include media-breakpoint-up(md) {
+        margin-top: rem(31px);
+    }
+    @include media-breakpoint-down(sm) {
+        &__first {
+            order: 1;
+            margin-bottom: rem(24px);
+        }
+        &__last {
+            order: 2;
+        }
+    }
+}
+
+.data-table {
+    &__row:first-child {
+        .data-table__item {
+            padding-top: 0;
+        }
+    }
+}
+
+.text {
+    &__element {
+        &::placeholder {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        &:focus::placeholder {
+            opacity: 0.3;
+        }
+    }
+}
+
+.placeholder--empty {
+    &::placeholder {
+        opacity: 0.3;
+    }
+}
+
+.section {
+    @include media-breakpoint-down(sm) {
+        &--mobile {
+            padding: 0;
+        }
+    }
+}
+
+.data-table__item {
+    @include media-breakpoint-down(sm) {
+        min-width: rem(70px);
+        font-size: rem(14px);
+    }
+    &:first-child {
+        min-width: 0;
+        font-weight: 700;
+    }
+    padding: rem(20px) 0;
+}
+
+.overall {
+    &__text {
+        color: $color-blue;
+        font-size: rem(14px);
+        font-weight: 600;
+        &--margin-t {
+            margin-top: rem(-6px);
+        }
+    }
+    .stars {
+        cursor: pointer;
+    }
+}
+
+.sticky-header {
+    z-index: 99;
+    &--is-open {
+        padding: rem(16px) 0 rem(8px);
+    }
+}
+
+.tab-section {
+    margin: rem(10px) auto 0;
+}
+
+.modal-fullscreen {
+    &__tab {
+        position: initial;
+        bottom: 0;
+        width: auto;
+        padding: rem(5px);
+        transform: none;
+        border-bottom: none;
+        color: $primary;
+        font-size: rem(14px);
+        text-align: center;
+        cursor: pointer;
+    }
+    &-header__text {
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 0;
+        }
+        margin-bottom: rem(10px);
+    }
+    &-header__text::before {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: no-repeat;
+        background-image: url($path + "/images/question.svg");
+        background-size: contain;
+        content: " ";
+        filter: none;
+    }
+    
+}
+
+.form--payment-mail {
+    border: rem(1px) solid $gray-300;
+    border-radius: rem(5px);
+}
+
+strong {
+    font-weight: 700;
+}
+
+[data-dismiss="modal"] {
+    cursor: pointer;
+}
+
+.modal-header {
+    align-items: center;
+    padding: rem(8px) rem(16px);
+}
+
+.rotateOver:before {
+    display: inline-block;
+    transform: rotate(180deg);            
+    transition: transform 300ms ease;
+}
+
+.rotateOut:before {
+    display: inline-block;
+    transform: rotate(0deg);            
+    transition: transform 300ms ease;
+}
+
+.cursor--pointer[data-toggle="tooltip"]::before {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    background: no-repeat;
+    background-image: url($path + "/images/question.svg");
+    background-size: contain;
+    content: " ";
+    filter: none; 
+
+}
+
+.apply-with-hk-text {
+    @include media-breakpoint-down(xs) {
+        padding-top: 4%;
+        font-size: 0.8rem;
+    }
+    @media (min-device-width: 414px) and (max-device-width: 576px) {
+        padding-top: 3.25%;
+    }
+    /* iphone 5/se ekrani icin font boyutu degisikligi*/
+    @media (max-device-height: 568px) and (max-device-width: 320px) {
+        padding-top: 5%;
+        font-size: 0.7rem;
+    }
+}
+
+.apply-with-hk-row {
+    @include media-breakpoint-down(xs) {
+        justify-content: space-around;
+    }
+    @include media-breakpoint-up(xs) {
+        margin-left: 0;
+    }
+}
+
+a.apply-with-hk-badge {
+    @include media-breakpoint-down(xs) {
+        font-size: 0.8rem;
+        &::before {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+    /* iphone 5/se ekrani icin font boyutu degisikligi*/
+    @media (max-device-height: 568px) and (max-device-width: 320px) {
+        font-size: 0.7rem;
+        &::before {
+            margin-right: 0;
+        }
+    }
+}
+
+.rating-score-text {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: 0;
+    }
+    margin-left: 3px;
+    color: #007AFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rateyo-stars {
+    margin-top: 2px;
+}
+
+.cursor--pointer {
+    padding-left: 5px;
+}
+
+.cursor--pointer[data-toggle="tooltip"]::before {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: no-repeat;
+    background-image: url($path + "/images/question.svg");
+    background-size: contain;
+    content: " ";
+    filter: none;
+}
+
+.tooltip-inner-div {
+    text-align: left;
+}
+
+.ratings {
+    margin-right: 0;
+    padding-top: 10px;
+}
+
+.online-application-desktop {
+    float: right;
+}
+
+.ratings-mobile {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        font-size: 0.8rem;
+    }
+    font-size: 0.9rem;
+}
+
+.ratings-row {
+    /* iphone 5/se */
+    @media (device-height: 568px) and (device-width: 320px) {
+        margin-left: -8px;
+    }
+    @media (max-width: 360px) {
+        padding-right: 0;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-right: 3%;
+    }
+    justify-content: space-between;
+    margin-left: 0;
+    padding-right: 5%;
+}
+
+.comment-modal-body {
+    @include media-breakpoint-down(sm) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.comment-modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.js-modal-rating-container {
+    margin-top: 2px;
+}
+
+.customer-score-title {
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
+}
+
+.js-total-score {
+    color: #007AFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.rating-p {
+    @include media-breakpoint-between(sm, md) { 
+        font-size: 0.825rem;
+    }
+}
+
+.rateyo-overall {
+    padding-left: 0;
+}
+
+.modal-fullscreen-header .container {
+    @include media-breakpoint-down(sm) {
+        padding-left: 0;
+    }
+}
+
+.overall-row {
+    display: flex;
+    align-items: flex-end;
+}

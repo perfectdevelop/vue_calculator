@@ -1,0 +1,29 @@
+/*
+*  Brands
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.brands {
+    @include media-breakpoint-down(sm) {
+        margin-left: 5px;
+    }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 76px;
+    transition: all .3s ease-in-out;
+    background-color: $color-white;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &:hover {
+        transition: all .3s ease-in-out;
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &__image {
+        width: 75%;
+        height: auto;
+    }
+}

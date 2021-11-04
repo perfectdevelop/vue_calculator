@@ -1,0 +1,26 @@
+/*
+*  Application Detail List
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*  Banu
+*/
+
+.application-detail-list {
+    &__elements {
+        border-bottom: 1px solid rgba(74, 74, 74, .1);
+        color: #4A4A4A;
+        font-family: $font-family-base;
+        font-size: rem(14px);
+        line-height: 2.67;
+        list-style: none;
+        text-align: left;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__value {
+        float: right;
+        font-weight: 600;
+    }
+}

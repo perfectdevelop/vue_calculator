@@ -1,0 +1,105 @@
+/*
+*  Deposit Selection Styles
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+
+body {
+    background-color: $gray-100;
+}
+
+.rating-container {
+    padding: 0;
+}
+
+.section--content {
+    @include media-breakpoint-up(md) {
+        margin-top: 60px;
+    }
+}
+
+.data-table__item {
+    @include media-breakpoint-down(sm) {
+        min-width: rem(70px);
+        font-size: rem(14px);
+    }
+
+    &:first-child {
+        min-width: 0;
+        font-weight: 700;
+    }
+
+    padding: rem(20px) 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.product-card {
+    &:first-child {
+        @include media-breakpoint-up(sm) {
+            margin-top: 0;
+        }
+    }
+
+    .additionalInterestRate {
+        padding-left: 7px;
+        color: $color-blue;
+    }
+
+    .cursor--pointer[data-toggle="tooltip"]::before {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: no-repeat;
+        background-image: url($path + "/images/question.svg");
+        background-size: contain;
+        content: " ";
+        filter: none;
+    }
+
+    @media (max-width: 768px) {
+        &__content--left-wrapper {
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        &__name {
+            padding: 0 20px;
+        }
+
+        .additional-product-card__description.text--copy {
+            font-size: 12px;
+        }
+
+        .product-card__content--right {
+            justify-content: flex-end;
+        }
+    }
+
+    .additional-product-card__description {
+        padding-top: 10px;
+        font-size: 14px;
+
+        &>* {
+            padding-top: 10px;
+        }
+    }
+
+    &__value {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.modal-info li:empty {
+    display: none;
+
+}
+
+.modal-fullscreen-header .tab-section>ul.nav {
+    display: flex;
+    justify-content: center;
+}

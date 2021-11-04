@@ -1,0 +1,34 @@
+/*
+*  Footer
+*  Hesapkurdu Arge <arge@hesapkurdu.com>
+*/
+
+.footer {
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+    padding: 48px 0;
+    background-color: #2B2B2B;
+
+    &--copy { 
+        color: #A5A5A5;
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    &--heading {
+        margin-bottom: 20px;
+        color: #A5A5A5;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+    .footer {
+        img {
+            width: 80%;
+        }
+        .footer-social-list {
+            font-size: 0.7rem;
+        }
+    }
+}
