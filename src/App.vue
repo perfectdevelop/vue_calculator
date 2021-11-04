@@ -5,8 +5,8 @@
     </div>
     <div class="banner banner--calculation">
       <div class="banner__content">
-        <Form/>
-        <Results/>
+        <Form />
+        <Results />
       </div>
     </div>
   </div>

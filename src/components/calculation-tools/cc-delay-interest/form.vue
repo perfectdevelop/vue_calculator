@@ -47,35 +47,37 @@
               <span class="">1 Ay: Aylık Brüt Ücret</span>
               <input
                 type="number"
-                v-model="inp[0]"
-                v-on:change="changeEvt($event)"
+                v-model="value0"
+                
                 class="input-table-child child1"
+                id="inputs1"
               />
             </div>
             <div class="line">
               <span class="">2 Ay: Aylık Brüt Ücret</span>
               <input
                 type="number"
-                v-model="inp[1]"
-                v-on:change="changeEvt1($event)"
+                v-model="value1"
                 class="input-table-child child2"
+                id="inputs2"
               />
             </div>
             <div class="line">
               <span class="">3 Ay: Aylık Brüt Ücret</span>
               <input
                 type="number"
-                v-model="inp[2]"
-                v-on:change="changeEvt2($event)"
+                v-model="value2"
                 class="input-table-child child3"
+                id="inputs3"
               />
             </div>
             <div class="line">
               <span class="">4 Ay: Aylık Brüt Ücret</span>
               <input
                 type="number"
-                v-model="inp[3]"
+                v-model="value3"
                 class="input-table-child child4"
+                id="inputs4"
               />
             </div>
             <div class="parent-calculate" v-if="error_message != 'error'">
@@ -100,6 +102,9 @@
     </div>
     <div class="result" v-if="result_price == 'NaN'">
       <p class="warning">Lütfen doğru verileri girin</p>
+    </div>
+    <div class="result" id="month_error">
+      <p class="warning">Lütfen ay girin</p>
     </div>
     <div class="result" v-if="error_message == 'not_error' && result_price != 'NaN'">
       <div class="lines">
@@ -131,13 +136,17 @@ export default {
   data() {
     return {
       loading: true,
+      value0:'',
+      value1:'',
+      value2:'',
+      value3:'',
       result_month: "",
       result_price: "",
       error_message: "",
       month: "",
       yandno: "",
       btnDisable: true,
-      inp: [, , ,],
+      inp: ['', '', '', ''],
       formError: {
         error: false,
         errorText: "",
@@ -170,12 +179,19 @@ export default {
       }
     },
 
-    calculate: function (event) {
+    calculate: function () {
+      console.log(this.month)
+      if(this.month == ""){
+        document.getElementById("month_error").style.display = "block";
+        return 0;
+      }else{
+        document.getElementById("month_error").style.display = "none";
+      }
       this.error_message = "not_error";
-      var B8 = parseFloat(this.inp[0]);
-      var B9 = parseFloat(this.inp[1]);
-      var B10 = parseFloat(this.inp[2]);
-      var B11 = parseFloat(this.inp[3]);
+      var B8 = parseFloat(this.value0);
+      var B9 = parseFloat(this.value1);
+      var B10 = parseFloat(this.value2);
+      var B11 = parseFloat(this.value3);
       var sum = B8 + B9 + B10 + B11;
       var B18 = 0.00759;
       var B17 = 3577.5;
@@ -192,12 +208,19 @@ export default {
 
     changeYorN(event) {
       if (event.target.value == "yes") {
-        this.inp[0] = 3577.5;
-        this.inp[1] = 3577.5;
-        this.inp[2] = 3577.5;
-        this.inp[3] = 3577.5;
-        console.log(this.inp[0]);
+        this.value0 = 3577.5;
+        this.value1 = 3577.5;
+        this.value2 = 3577.5;
+        this.value3 = 3577.5;
+        document.getElementById('inputs1').setAttribute("disabled","disabled");
+        document.getElementById('inputs2').setAttribute("disabled","disabled");
+        document.getElementById('inputs3').setAttribute("disabled","disabled");
+        document.getElementById('inputs4').setAttribute("disabled","disabled");
       } else if (event.target.value == "no") {
+        document.getElementById('inputs1').removeAttribute("disabled");
+        document.getElementById('inputs2').removeAttribute("disabled");
+        document.getElementById('inputs3').removeAttribute("disabled");
+        document.getElementById('inputs4').removeAttribute("disabled");
         this.inp[0] = "";
         this.inp[1] = "";
         this.inp[2] = "";
@@ -205,18 +228,21 @@ export default {
       }
     },
 
-    changeEvt(evt) {
-      this.inp[1] = evt.target._value;
-      this.inp[2] = evt.target._value;
-      this.inp[3] = evt.target._value;
-    },
-    changeEvt1(evt) {
-      this.inp[2] = evt.target._value;
-      this.inp[3] = evt.target._value;
-    },
-    changeEvt2(evt) {
-      this.inp[3] = evt.target._value;
-    },
+    // changeEvt(evt) {
+    //   console.log(evt.target.value);
+    //   this.inp[1] = evt.target.value;
+    //   this.inp[2] = evt.target.value;
+    //   this.inp[3] = evt.target.value;
+    // },
+    // changeEvt1(evt) {
+    //   console.log(evt.target.value);
+    //   this.inp[2] = evt.target.value;
+    //   this.inp[3] = evt.target.value;
+    // },
+    // changeEvt2(evt) {
+    //   console.log(evt.target.value);
+    //   this.inp[3] = evt.target.value;
+    // },
 
     isOpenForm(id) {
       let dataIsOpenForm;
@@ -382,6 +408,7 @@ export default {
     this.loading = false;
     this.btnDisable = false;
   },
+  
   watch: {
     "formParams.limit": {
       handler: function (val) {
@@ -400,6 +427,24 @@ export default {
         this.formParams.termDebtPaid = val != 0 ? this.numberWithDot(val) : "";
       },
     },
+    value0 :function(val){
+      this.value0 = val;
+      this.value1 = val;
+      this.value2 = val;
+      this.value3 = val;
+    },
+    value1: function(val){
+      this.value1 = val;
+      this.value2 = val;
+      this.value3 = val;
+    },
+    value2: function(val){
+      this.value2 = val;
+      this.value3 = val;
+    },
+    value3: function(val){
+      this.value3 = val;
+    }
   },
 };
 </script>
