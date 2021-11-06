@@ -15,70 +15,86 @@
         <div class="position-relative">
           <loading v-if="loading"></loading>
           <div class="days-group">
-            <span>Son 3 Yıl İçinde Ödenen Prim Günü</span>
-            <select
-              v-model="month"
-              class="form-select form-select-lg mb-3"
-              v-on:change="changeMonth($event)"
+            <label class="funnel-form__label"
+              >Son 3 Yıl İçinde Ödenen Prim Günü</label
             >
-              <option disabled value="none">Seçiniz</option>
-              <option value="under_600">600 günden az</option>
-              <option value="more_600">600 -899 gün arası</option>
-              <option value="more_900">900 -1079 günra arası</option>
-              <option value="more_1080">
-                1080 (son üç yıl kesintisiz ödeme)
-              </option>
-            </select>
+            <label for="" class="select">
+              <select
+                v-model="month"
+                class="select__element"
+                v-on:change="changeMonth($event)"
+              >
+                <option disabled value="none">Seçiniz</option>
+                <option value="under_600">600 günden az</option>
+                <option value="more_600">600 -899 gün arası</option>
+                <option value="more_900">900 -1079 günra arası</option>
+                <option value="more_1080">
+                  1080 (son üç yıl kesintisiz ödeme)
+                </option>
+              </select>
+            </label>
           </div>
           <div class="yes-no">
-            <span class="">Asgari ücretle mi çalışıyorsunuz?</span>
+            <label class="funnel-form__label"
+              >Asgari ücretle mi çalışıyorsunuz?</label
+            >
+            <label for="" class="select">
             <select
               v-model="yandno"
               v-on:change="changeYorN($event)"
-              class="form-select form-select-lg mb-3"
+              class="select__element"
             >
               <option disabled value="none">Seçiniz</option>
               <option value="yes">Evet</option>
               <option value="no">Hayır</option>
             </select>
+            </label>
           </div>
           <div class="input-table">
-            <div class="line">
-              <span class="">1 Ay: Aylık Brüt Ücret</span>
+            <div class="one-line">
+              <span class="funnel-form__label">1 Ay: Aylık Brüt Ücret</span>
+              <label for="" class="text text--block d-inline-block">
               <input
+                autocomplete="off"
                 type="number"
                 v-model="value0"
-                
-                class="input-table-child child1"
+                class="text__element"
                 id="inputs1"
               />
+              </label>
             </div>
-            <div class="line">
-              <span class="">2 Ay: Aylık Brüt Ücret</span>
+            <div class="one-line">
+              <span class="funnel-form__label">2 Ay: Aylık Brüt Ücret</span>
+              <label for="" class="text text--block d-inline-block">
               <input
                 type="number"
                 v-model="value1"
-                class="input-table-child child2"
+                class="text__element"
                 id="inputs2"
               />
+              </label>
             </div>
-            <div class="line">
-              <span class="">3 Ay: Aylık Brüt Ücret</span>
+            <div class="one-line">
+              <span class="funnel-form__label">3 Ay: Aylık Brüt Ücret</span>
+              <label for="" class="text text--block d-inline-block">
               <input
                 type="number"
                 v-model="value2"
-                class="input-table-child child3"
+                class="text__element"
                 id="inputs3"
               />
+              </label>
             </div>
-            <div class="line">
-              <span class="">4 Ay: Aylık Brüt Ücret</span>
+            <div class="one-line">
+              <span class="funnel-form__label">4 Ay: Aylık Brüt Ücret</span>
+              <label for="" class="text text--block d-inline-block">
               <input
                 type="number"
                 v-model="value3"
-                class="input-table-child child4"
+                class="text__element"
                 id="inputs4"
               />
+              </label>
             </div>
             <div class="parent-calculate" v-if="error_message != 'error'">
               <button
@@ -106,9 +122,12 @@
     <div class="result" id="month_error">
       <p class="warning">Lütfen ay girin</p>
     </div>
-    <div class="result" v-if="error_message == 'not_error' && result_price != 'NaN'">
+    <div
+      class="result"
+      v-if="error_message == 'not_error' && result_price != 'NaN'"
+    >
       <div class="lines">
-        <span class="">Aylık İşsizlik Maaşı Tutar:&nbsp;&nbsp;</span> 
+        <span class="">Aylık İşsizlik Maaşı Tutar:&nbsp;&nbsp;</span>
         <p class="answer">{{ result_price }}</p>
       </div>
       <div class="lines">
@@ -136,17 +155,17 @@ export default {
   data() {
     return {
       loading: true,
-      value0:'',
-      value1:'',
-      value2:'',
-      value3:'',
+      value0: "",
+      value1: "",
+      value2: "",
+      value3: "",
       result_month: "",
       result_price: "",
       error_message: "",
       month: "",
       yandno: "",
       btnDisable: true,
-      inp: ['', '', '', ''],
+      inp: ["", "", "", ""],
       formError: {
         error: false,
         errorText: "",
@@ -180,11 +199,11 @@ export default {
     },
 
     calculate: function () {
-      console.log(this.month)
-      if(this.month == ""){
+      console.log(this.month);
+      if (this.month == "") {
         document.getElementById("month_error").style.display = "block";
         return 0;
-      }else{
+      } else {
         document.getElementById("month_error").style.display = "none";
       }
       this.error_message = "not_error";
@@ -212,37 +231,21 @@ export default {
         this.value1 = 3577.5;
         this.value2 = 3577.5;
         this.value3 = 3577.5;
-        document.getElementById('inputs1').setAttribute("disabled","disabled");
-        document.getElementById('inputs2').setAttribute("disabled","disabled");
-        document.getElementById('inputs3').setAttribute("disabled","disabled");
-        document.getElementById('inputs4').setAttribute("disabled","disabled");
+        document.getElementById("inputs1").setAttribute("disabled", "disabled");
+        document.getElementById("inputs2").setAttribute("disabled", "disabled");
+        document.getElementById("inputs3").setAttribute("disabled", "disabled");
+        document.getElementById("inputs4").setAttribute("disabled", "disabled");
       } else if (event.target.value == "no") {
-        document.getElementById('inputs1').removeAttribute("disabled");
-        document.getElementById('inputs2').removeAttribute("disabled");
-        document.getElementById('inputs3').removeAttribute("disabled");
-        document.getElementById('inputs4').removeAttribute("disabled");
+        document.getElementById("inputs1").removeAttribute("disabled");
+        document.getElementById("inputs2").removeAttribute("disabled");
+        document.getElementById("inputs3").removeAttribute("disabled");
+        document.getElementById("inputs4").removeAttribute("disabled");
         this.inp[0] = "";
         this.inp[1] = "";
         this.inp[2] = "";
         this.inp[3] = "";
       }
     },
-
-    // changeEvt(evt) {
-    //   console.log(evt.target.value);
-    //   this.inp[1] = evt.target.value;
-    //   this.inp[2] = evt.target.value;
-    //   this.inp[3] = evt.target.value;
-    // },
-    // changeEvt1(evt) {
-    //   console.log(evt.target.value);
-    //   this.inp[2] = evt.target.value;
-    //   this.inp[3] = evt.target.value;
-    // },
-    // changeEvt2(evt) {
-    //   console.log(evt.target.value);
-    //   this.inp[3] = evt.target.value;
-    // },
 
     isOpenForm(id) {
       let dataIsOpenForm;
@@ -408,7 +411,7 @@ export default {
     this.loading = false;
     this.btnDisable = false;
   },
-  
+
   watch: {
     "formParams.limit": {
       handler: function (val) {
@@ -427,24 +430,24 @@ export default {
         this.formParams.termDebtPaid = val != 0 ? this.numberWithDot(val) : "";
       },
     },
-    value0 :function(val){
+    value0: function (val) {
       this.value0 = val;
       this.value1 = val;
       this.value2 = val;
       this.value3 = val;
     },
-    value1: function(val){
+    value1: function (val) {
       this.value1 = val;
       this.value2 = val;
       this.value3 = val;
     },
-    value2: function(val){
+    value2: function (val) {
       this.value2 = val;
       this.value3 = val;
     },
-    value3: function(val){
+    value3: function (val) {
       this.value3 = val;
-    }
+    },
   },
 };
 </script>
